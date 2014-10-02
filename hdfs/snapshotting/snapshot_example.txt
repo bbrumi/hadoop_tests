@@ -2,4 +2,98 @@
 
 # Is there a snapshottable directory?
 
-hdfs lsSnapshottableDir
+$ hdfs lsSnapshottableDir
+# If this returns nothing, means that there are not snapshottable directories
+
+# create a directory and add some data to it
+
+$ hdfs dfs -mkdir snapTest
+
+$ cat test.txt
+This is my snapshotting test.
+
+$ hdfs dfs -put test.txt snapTest
+
+#Note: my home directory on HDFS is /user/training
+
+$ sudo -u hdfs hdfs dfsadmin -allowSnapshot /user/training/snapTest
+Allowing snaphot on /user/training/snapTest succeeded
+
+$ hdfs lsSnapshottableDir
+drwxr-xr-x 0 training supergroup 0 2014-10-02 09:21 0 65536 /user/training/snapTest
+
+$ hdfs dfs -createSnapshot /user/training/snapTest
+Created snapshot /user/training/snapTest/.snapshot/s20141002-092518.452
+
+# So where can we see this? Not on the WebUI when we browse the filesystem
+
+$ hdfs dfs -ls snapTest
+Found 1 items
+-rw-r--r--   1 training supergroup         30 2014-10-02 09:21 snapTest/test.txt
+
+$ hdfs dfs -ls
+Found 2 items
+drwxr-xr-x   - training supergroup          0 2014-10-02 09:11 input
+drwxr-xr-x   - training supergroup          0 2014-10-02 09:25 snapTest
+
+# But wait...here it is:
+$ hdfs dfs -ls snapTest/.snapshot
+Found 1 items
+drwxr-xr-x   - training supergroup          0 2014-10-02 09:25 snapTest/.snapshot/s20141002-092518.452
+
+$ hdfs dfs -ls snapTest/.snapshot/s20141002-092518.452
+Found 1 items
+-rw-r--r--   1 training supergroup         30 2014-10-02 09:21 snapTest/.snapshot/s20141002-092518.452/test.txt
+
+# Let's see the sizes
+
+hdfs dfs -du -h snapTest
+30  snapTest/test.txt
+$ hdfs dfs -du -h snapTest/.snapshot
+30  snapTest/.snapshot/s20141002-092518.452
+$ hdfs dfs -du -h snapTest/.snapshot/s20141002-092518.452
+30  snapTest/.snapshot/s20141002-092518.452/test.txt
+
+# Now add some bad data or delete the file
+
+$ hdfs dfs -put bad.txt snapTest
+
+$ hdfs dfs -du -h snapTest
+61  snapTest/bad.txt
+30  snapTest/test.txt
+
+$  hdfs dfs -du -h snapTest/.snapshot/
+91  snapTest/.snapshot/s20141002-092518.452
+
+# Create new snapshot
+$ hdfs dfs -createSnapshot /user/training/snapTest
+Created snapshot /user/training/snapTest/.snapshot/s20141002-100424.391
+
+$ hdfs dfs -du -h snapTest/.snapshot/
+91  snapTest/.snapshot/s20141002-092518.452
+91  snapTest/.snapshot/s20141002-100424.391
+
+$ hdfs dfs -ls snapTest/.snapshot/s20141002-092518.452
+hdfs Found 1 items
+-rw-r--r--   1 training supergroup         30 2014-10-02 09:21 snapTest/.snapshot/s20141002-092518.452/test.txt
+
+$ hdfs dfs -du -h snapTest/.snapshot/s2014100424.391
+61  snapTest/.snapshot/s20141002-100424.391/bad.txt
+30  snapTest/.snapshot/s20141002-100424.391/test.txt
+
+# So let's recover from previous snapshot
+# Clean directory
+
+$ hdfs dfs -rm -r snapTest/*
+$ hdfs dfs -ls snapTest
+
+$ hdfs dfs -ls snapTest/.snapshot
+Found 2 items
+drwxr-xr-x   - training supergroup          0 2014-10-02 09:25 snapTest/.snapshot/s20141002-092518.452
+drwxr-xr-x   - training supergroup          0 2014-10-02 10:04 snapTest/.snapshot/s20141002-100424.391
+
+$ hdfs dfs -cp snapTest/.snapshot/s20141002-092518.452/* snapTest
+$ hdfs dfs -ls snapTest
+Found 1 items
+-rw-r--r--   1 training supergroup         30 2014-10-02 10:10 snapTest/test.txt
+
