@@ -1,0 +1,5 @@
+# log in to a machine where you have access to the cluster
+
+# Is there a snapshottable directory?
+
+hdfs lsSnapshottableDir
