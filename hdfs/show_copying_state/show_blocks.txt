@@ -1,0 +1,6 @@
+# Generate 200MB
+# Start copying to hdfs
+
+head -c 209715200 /dev/random | hdfs dfs -put - rand.dat
+
+# check the browser and/or hdfs dfs -ls

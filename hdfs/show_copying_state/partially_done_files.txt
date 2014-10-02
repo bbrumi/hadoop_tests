@@ -1,0 +1,14 @@
+# In one terminal start to generate random strings and put this in a file on HDFS.
+
+strings /dev/urandom | hdfs dfs -put - random.txt
+# Do not close this terminal
+
+# Navigate to your home directory on HDFS and show that there is a random.txt_COPYING_ file
+# see that the size of the file is 0
+
+$ hdfs dfs -du -h
+0        random.txt._COPYING_
+
+# After the demo stop the generation, otherwise we can fill up HDFS.
+
+# Show that the size of the file changed 
