@@ -1,3 +1,5 @@
+#https://chromium.googlesource.com/external/boto/+/be8bd6a27327aa0e025d9be9fe1b7720e7471a60/boto/ec2/instance.py
+
 import boto.ec2
 import sys
 
@@ -33,7 +35,8 @@ for i in range(nr_clients):
 			sys.exit(1) 
 		master = my_masters_list[master_cnt] 
 		master_cnt+=1
-		print "%s %s %s %s" % (master.id, master.public_dns_name, master.private_dns_name, master.instance_type)
+		#print "%s %s %s %s" % (master.id, master.public_dns_name, master.private_dns_name, master.instance_type)
+		print "%s %s" % (master.ip_address, master.private_ip_address)
   	print 'Workers:'
 	for j in range(nr_workers):      
                 if (worker_cnt >= len(my_workers_list)):
@@ -41,4 +44,5 @@ for i in range(nr_clients):
                         sys.exit(1)
                 worker = my_workers_list[worker_cnt] 
                 worker_cnt+=1
-                print "%s %s %s %s" % (worker.id, worker.public_dns_name, worker.private_dns_name, worker.instance_type)
+                #print "%s %s %s %s" % (worker.id, worker.public_dns_name, worker.private_dns_name, worker.instance_type)
+		print "%s %s" % (master.ip_address, master.private_ip_address)

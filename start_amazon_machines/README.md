@@ -28,12 +28,14 @@ To start up we need to do the following:
 
 		# pip install -r requirements.txt
 		
-Make sure that the correct AMI instances and amazon key is specified in start_amazon_machines/var/machine_specs.yml
+Make sure that the correct AMI instances are specified in start_amazon_machines/var/machine_specs.yml
 Here you can also specify how many instances you want to start and what type of instances you want to start (m1.small, etc.)
 
 To start the instances run:
 
 	#  ansible-playbook -i hosts --private-key=~/.ssh/hadoop_env  -u root -f20 start_instances.yml 
+
+If you want to start ec2 machines with a keypair use the start_instances_withKeys.yml and make sure that you specified the key which the machines should use in var/machine_specs.yml
 
 Now let's get the IPs and combine them so we get 2 master and 5 workers per user. First we need to set up boto, so we need to create a file:
 
