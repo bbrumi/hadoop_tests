@@ -1,0 +1,10 @@
+worker_count: 10
+worker_ami: ami-414bb136
+worker_instance_type: m1.small
+
+master_count: 4
+master_ami: ami-414bb136
+master_instance_type: m1.medium
+
+key_name: hadoop_env
+cluster_environment: cdh-training-cluster

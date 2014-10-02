@@ -62,3 +62,4 @@ java.lang.RuntimeException: Could not read HttpFS signature secret file: /etc/ha
 
 
 Solution: create the secret file in the conf directory. You can write in the file whatever you want.
+This file is specified in httpfs.authentication.signature.secret.file. Default location is: ${httpfs.config.dir}/httpfs-signature.secret. This file contains the secret to sign HttpFS hadoop-auth cookies. This file should be readable only by the system user running HttpFS service. If multiple HttpFS servers are used in a load-balancer/round-robin fashion, they should share the secret file.
