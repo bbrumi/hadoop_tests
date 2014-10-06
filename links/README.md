@@ -50,8 +50,8 @@
 ### YARN
 
 * [Managing Multiple Resources in Hadoop 2 with YARN](http://blog.cloudera.com/blog/2013/12/managing-multiple-resources-in-hadoop-2-with-yarn/)
-
-
+* [Apache Hadoop YARN: Avoiding 6 Time-Consuming "Gotchas"](http://blog.cloudera.com/blog/2014/04/apache-hadoop-yarn-avoiding-6-time-consuming-gotchas/)
+* [How Apache Hadoop YARN HA Works](http://blog.cloudera.com/blog/2014/05/how-apache-hadoop-yarn-ha-works/)
 
 
 
@@ -59,6 +59,7 @@
 * [How does Cloudera Manager work?](http://blog.cloudera.com/blog/2013/07/how-does-cloudera-manager-work/)
 * [Understanding the Parcel Binary Distribution Format](http://blog.cloudera.com/blog/2013/05/faq-understanding-the-parcel-binary-distribution-format/)
 * [Backing up CM databases](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-latest/Cloudera-Manager-Administration-Guide/cm5ag_backup_dbs.html)
+* [How-to: Automate Your Cluster with Cloudera Manager API](http://blog.cloudera.com/blog/2012/09/automating-your-cluster-with-cloudera-manager-api/)
 
 
 ### Flume
