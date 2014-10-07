@@ -98,3 +98,9 @@
 * [Configuring Impala and MapReduce for Multi-tenant Performance](http://blog.cloudera.com/blog/2013/06/configuring-impala-and-mapreduce-for-multi-tenant-performance/)
 
 * [Impala security](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v1/latest/Installing-and-Using-Impala/ciiu_security.html)
+
+### Compression
+* [Compression options in Hadoop - A tale of tradeoffs](http://www.slideshare.net/Hadoop_Summit/kamat-singh-june27425pmroom210cv2)
+
+### Google Whitepapers* [GFS](http://research.google.com/archive/gfs-sosp2003.pdf)* [Mapreduce](http://research.google.com/archive/mapreduce-osdi04.pdf)
+* [BigTable](http://research.google.com/archive/bigtable-osdi06.pdf)
