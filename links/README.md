@@ -9,7 +9,7 @@
 *  [A guide to checkpointing in Hadoop](http://blog.cloudera.com/blog/2014/03/a-guide-to-checkpointing-in-hadoop/)
 
 * [How Improved Short-Circuit Local Reads Bring Better Performance and Security to Hadoop](http://blog.cloudera.com/blog/2013/08/how-improved-short-circuit-local-reads-bring-better-performance-and-security-to-hadoop/)
-* * [Expose disk-location information for blocks to enable better scheduling](https://issues.apache.org/jira/browse/HDFS-3672)
+* [Expose disk-location information for blocks to enable better scheduling](https://issues.apache.org/jira/browse/HDFS-3672)
 * [DFS read performance suboptimal when client co-located on nodes with data](https://issues.apache.org/jira/browse/HDFS-347)
 
 * [Two memory-related issues on the Apache Hadoop cluster (memory swapping and the OOM killer)](http://hakunamapdata.com/two-memory-related-issues-on-the-apache-hadoop-cluster/)
@@ -50,9 +50,13 @@
 ### YARN
 
 * [Managing Multiple Resources in Hadoop 2 with YARN](http://blog.cloudera.com/blog/2013/12/managing-multiple-resources-in-hadoop-2-with-yarn/)
-* [Apache Hadoop YARN: Avoiding 6 Time-Consuming "Gotchas"](http://blog.cloudera.com/blog/2014/04/apache-hadoop-yarn-avoiding-6-time-consuming-gotchas/)
 * [How Apache Hadoop YARN HA Works](http://blog.cloudera.com/blog/2014/05/how-apache-hadoop-yarn-ha-works/)
 
+##### Migrating from MRv1 to MRv2
+* [Migrating from MRv1 to MRv2](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/latest/CDH5-Installation-Guide/cdh5ig_mapreduce_to_yarn_migrate.html)
+* [Migrating to MapReduce 2 on YARN (For Operators)](http://blog.cloudera.com/blog/2013/11/migrating-to-mapreduce-2-on-yarn-for-operators/)
+* [Migrating to MapReduce 2 on YARN (For Users)](http://blog.cloudera.com/blog/2013/11/migrating-to-mapreduce-2-on-yarn-for-users/)
+* [Apache Hadoop YARN: Avoiding 6 Time-Consuming "Gotchas"](http://blog.cloudera.com/blog/2014/04/apache-hadoop-yarn-avoiding-6-time-consuming-gotchas/)
 
 
 ### Cloudera Manager
@@ -61,6 +65,8 @@
 * [Backing up CM databases](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-latest/Cloudera-Manager-Administration-Guide/cm5ag_backup_dbs.html)
 * [How-to: Automate Your Cluster with Cloudera Manager API](http://blog.cloudera.com/blog/2012/09/automating-your-cluster-with-cloudera-manager-api/)
 
+### Fair scheduler
+* [Enabling fair scheduler resource pools](http://extremehadoop.wordpress.com/tag/multitenant/)
 
 ### Flume
 
@@ -76,7 +82,12 @@
 ###Sqoop
 * [Sqoop User Guide](https://sqoop.apache.org/docs/1.4.0-incubating/SqoopUserGuide.html#id1762844)
 
+### Thrift
+* [Introduction to Thrift](http://thrift-tutorial.readthedocs.org/en/latest/intro.html)
+
+
 ### Hue
+* [Hive Language Manual](https://cwiki.apache.org/confluence/display/Hive/LanguageManual)
 * [How-to: Make Hadoop Accessible via LDAP](http://blog.cloudera.com/blog/2014/02/how-to-make-hadoop-accessible-via-ldap/)
 
 ### Hive
@@ -86,7 +97,8 @@
 
 ### Sentry
 * [With Sentry, Cloudera Fills Hadoop’s Enterprise Security Gap](http://blog.cloudera.com/blog/2013/07/with-sentry-cloudera-fills-hadoops-enterprise-security-gap/)
-
+* [Apache Sentry](https://blogs.apache.org/sentry/entry/apache_sentry_architecture_overview)
+* [Getting started with Sentry](https://blogs.apache.org/sentry/entry/getting_started)
 
 ###  Impala
 
@@ -101,6 +113,15 @@
 
 ### Compression
 * [Compression options in Hadoop - A tale of tradeoffs](http://www.slideshare.net/Hadoop_Summit/kamat-singh-june27425pmroom210cv2)
+
+### Monitoring
+* [HADOOP-6728-MetricsV2](http://wiki.apache.org/hadoop/HADOOP-6728-MetricsV2)
+* [What is Hadoop Metrics2?](http://blog.cloudera.com/blog/2012/10/what-is-hadoop-metrics2/)
+
+### Troubleshooting
+
+* [strace](http://timetobleed.com/hello-world/)
+* [Deceived by xciever](http://ccgtech.blogspot.fr/2010/02/hadoop-hdfs-deceived-by-xciever.html)
 
 ### Google Whitepapers* [GFS](http://research.google.com/archive/gfs-sosp2003.pdf)* [Mapreduce](http://research.google.com/archive/mapreduce-osdi04.pdf)
 * [BigTable](http://research.google.com/archive/bigtable-osdi06.pdf)
