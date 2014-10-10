@@ -96,8 +96,14 @@
 
 ### Hive
 
+* [Language Manual](https://cwiki.apache.org/confluence/display/Hive/LanguageManual)
 * [Schema tool](https://cwiki.apache.org/confluence/display/Hive/Hive+Schema+Tool)
 * [Hive locking](https://cwiki.apache.org/confluence/display/Hive/Locking)
+* [Parallel ORDER BY - Hive](https://issues.apache.org/jira/browse/HIVE-1402)
+* [How-to: Use a SerDe in Apache Hive](http://blog.cloudera.com/blog/2012/12/how-to-use-a-serde-in-apache-hive/)
+* [Writing UDFs for Hive](http://www.cloudera.com/content/cloudera/en/resources/library/training/writing-udfs-for-hive.html)
+* [User Defined functions in Hive](https://blogs.oracle.com/datawarehousing/entry/user_defined_functions_in_hive)
+* [Hive UDFs](https://github.com/dataiku/dataiku-hive-udf)
 
 ### Sentry
 * [With Sentry, Cloudera Fills Hadoop’s Enterprise Security Gap](http://blog.cloudera.com/blog/2013/07/with-sentry-cloudera-fills-hadoops-enterprise-security-gap/)
@@ -114,6 +120,12 @@
 * [Configuring Impala and MapReduce for Multi-tenant Performance](http://blog.cloudera.com/blog/2013/06/configuring-impala-and-mapreduce-for-multi-tenant-performance/)
 
 * [Impala security](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v1/latest/Installing-and-Using-Impala/ciiu_security.html)
+
+* [Inside Cloudera Impala: Runtime Code Generation](http://blog.cloudera.com/blog/2013/02/inside-cloudera-impala-runtime-code-generation/)
+
+* [User Defined functions in Impala](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v1/latest/Installing-and-Using-Impala/ciiu_udf.html)
+
+
 
 ### Compression
 * [Compression options in Hadoop - A tale of tradeoffs](http://www.slideshare.net/Hadoop_Summit/kamat-singh-june27425pmroom210cv2)
