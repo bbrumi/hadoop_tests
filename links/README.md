@@ -61,13 +61,16 @@
 
 ### Cloudera Manager
 * [How does Cloudera Manager work?](http://blog.cloudera.com/blog/2013/07/how-does-cloudera-manager-work/)
+* [Cloudera Manager Primer - understanding terminology](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-latest/Cloudera-Manager-Introduction/cm5i_primer.html?scroll=concept_wfj_tny_jk_unique_1)
 * [Understanding the Parcel Binary Distribution Format](http://blog.cloudera.com/blog/2013/05/faq-understanding-the-parcel-binary-distribution-format/)
-* [Backing up CM databases](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-latest/Cloudera-Manager-Administration-Guide/cm5ag_backup_dbs.html)
-* [How-to: Automate Your Cluster with Cloudera Manager API](http://blog.cloudera.com/blog/2012/09/automating-your-cluster-with-cloudera-manager-api/)
 * [Dynamic Resource Pools](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-latest/Cloudera-Manager-Managing-Clusters/cm5mc_resource_pools.html)
 * [Static Service Pools](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-latest/Cloudera-Manager-Managing-Clusters/cm5mc_service_pools.html)
 * [Safety valve](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v4-8-1/Cloudera-Manager-Managing-Clusters/cmmc_safety_valve.html)
 * [Charts](http://www.notesmine.org/faq/#Hadoop_Examples)
+* [Backing up CM databases](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-latest/Cloudera-Manager-Administration-Guide/cm5ag_backup_dbs.html)
+* [How-to: Automate Your Cluster with Cloudera Manager API](http://blog.cloudera.com/blog/2012/09/automating-your-cluster-with-cloudera-manager-api/)
+* [Cloudera Manager REST API](http://cloudera.github.io/cm_api/)
+* [Cloudera API](http://cloudera.github.io/cm_api/epydoc/5.0.0/index.html)
 
 ### Fair scheduler
 * [Enabling fair scheduler resource pools](http://extremehadoop.wordpress.com/tag/multitenant/)
@@ -139,5 +142,8 @@
 * [strace](http://timetobleed.com/hello-world/)
 * [Deceived by xciever](http://ccgtech.blogspot.fr/2010/02/hadoop-hdfs-deceived-by-xciever.html)
 
-### Google Whitepapers* [GFS](http://research.google.com/archive/gfs-sosp2003.pdf)* [Mapreduce](http://research.google.com/archive/mapreduce-osdi04.pdf)
-* [BigTable](http://research.google.com/archive/bigtable-osdi06.pdf)
+### Google Whitepapers
+
+* [GFS](http://research.google.com/archive/gfs-sosp2003.pdf)
+* [Mapreduce](http://research.google.com/archive/mapreduce-osdi04.pdf)
+* [BigTable](http://research.google.com/archive/bigtable-osdi06.pdf)
