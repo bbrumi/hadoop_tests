@@ -1,0 +1,1059 @@
+[?1034h
+
++-------------------+---------------------+
+| name              | bday                |
++-------------------+---------------------+
+| Julietta Finck    | 2008-08-09 00:42:48 |
+| Minna Edlund      | 2011-07-21 06:56:28 |
+| Noelia Espiritu   | 2011-11-17 08:14:30 |
+| Chantay Sitsler   | 2009-01-31 19:44:36 |
+| Elton Prenatt     | 2012-09-17 14:19:27 |
+| Milo Birkhead     | 2008-12-06 16:24:42 |
+| Meryl Schmeltzer  | 2009-11-05 07:03:55 |
+| Retha Loesch      | 2011-07-13 19:57:34 |
+| Emilia Ambriz     | 2010-12-24 07:50:58 |
+| Ardella Petrosino | 2011-01-27 07:26:18 |
+| Marvel Planas     | 2012-01-06 06:39:56 |
+| Daniele Meister   | 2009-10-08 18:37:08 |
+| Voncile Lawver    | 2010-03-13 14:50:30 |
+| Derrick Servais   | 2009-01-13 10:24:44 |
+| Merlin Nowlin     | 2008-04-25 23:28:44 |
+| Janiece Hebel     | 2012-01-14 09:38:50 |
+| Mittie Neary      | 2010-08-31 15:49:34 |
+| Aleen Mclendon    | 2009-01-17 08:26:55 |
+| Louise Caffey     | 2009-12-21 12:12:20 |
+| Alva Rossignol    | 2012-02-18 06:24:13 |
+| Kaylee Summa      | 2009-01-10 17:02:33 |
+| France Hagwood    | 2012-05-17 20:56:32 |
+| Xiomara Smelser   | 2011-04-09 20:57:00 |
+| Karyn Haffey      | 2008-01-17 16:06:31 |
+| Vertie Pedraza    | 2008-04-12 03:16:28 |
+| Tosha Crowder     | 2009-06-10 11:59:36 |
+| Mohammed Lazenby  | 2009-07-22 05:23:52 |
+| Alaine Eder       | 2010-12-08 03:21:05 |
+| Terina Mcfatridge | 2009-09-01 16:18:28 |
+| Shenna Gillmore   | 2009-07-04 13:03:55 |
+| Shalon Mormon     | 2010-06-22 21:18:56 |
+| Lorine Krok       | 2011-12-15 21:41:40 |
+| Shakia Slack      | 2011-11-28 10:36:30 |
+| Domitila Jacobs   | 2009-04-24 06:10:45 |
+| Francie Joplin    | 2009-03-26 04:21:17 |
+| Granville Doe     | 2011-06-01 03:54:48 |
+| Krysta Chamblee   | 2010-05-15 21:28:31 |
+| Arcelia Lance     | 2008-03-17 15:44:53 |
+| Jamika Escalera   | 2009-04-14 08:09:53 |
+| Loyce Ormsby      | 2008-06-21 01:41:13 |
+| Tammera Shanks    | 2009-07-25 14:39:54 |
+| Yen Talcott       | 2008-09-21 14:14:42 |
+| Angela Mccabe     | 2011-06-18 01:57:52 |
+| Lamar Petitt      | 2009-11-26 17:34:40 |
+| Ezekiel Garrido   | 2011-08-30 01:13:19 |
+| Susana Harp       | 2011-01-25 19:00:48 |
+| Petra Jhonson     | 2011-06-04 05:07:46 |
+| Evia Cutchin      | 2010-01-03 02:08:51 |
+| Kacy Haven        | 2010-09-10 23:01:19 |
+| Jennette Mutchler | 2009-01-19 22:34:24 |
++-------------------+---------------------+
++--------------+--------+----------+----------+-------+------------+----------+---------------+----------------+
+| Operator     | #Hosts | Avg Time | Max Time | #Rows | Est. #Rows | Peak Mem | Est. Peak Mem | Detail         |
++--------------+--------+----------+----------+-------+------------+----------+---------------+----------------+
+| 01:EXCHANGE  | 1      | 13.80us  | 13.80us  | 50    | 0          | 0 B      | -1 B          | UNPARTITIONED  |
+| 00:SCAN HDFS | 1      | 132.03ms | 132.03ms | 50    | 0          | 55.00 KB | 32.00 MB      | default.people |
++--------------+--------+----------+----------+-------+------------+----------+---------------+----------------+
+Query Runtime Profile:
+Query (id=a849ff2f1e30fac5:db49e6b1ab56a6b4):
+  Summary:
+    Session ID: 4940658284e12d53:f037687bbfed01bd
+    Session Type: BEESWAX
+    Start Time: 2014-10-28 05:37:11.590893000
+    End Time: 2014-10-28 05:37:11.933886000
+    Query Type: QUERY
+    Query State: FINISHED
+    Query Status: OK
+    Impala Version: impalad version 2.0.0-cdh5 RELEASE (build ecf30af0b4d6e56ea80297df2189367ada6b7da7)
+    User: cloudera
+    Connected User: cloudera
+    Delegated User: 
+    Network Address: 127.0.0.1:49071
+    Default Db: default
+    Sql Statement: -- let's look at the difference between storing as text file vs. parquet file
+
+SELECT * FROM people
+    Coordinator: quickstart.cloudera:22000
+    Plan: 
+----------------
+Estimated Per-Host Requirements: Memory=32.00MB VCores=1
+WARNING: The following tables are missing relevant table and/or column statistics.
+default.people
+
+F01:PLAN FRAGMENT [UNPARTITIONED]
+  01:EXCHANGE [UNPARTITIONED]
+     hosts=1 per-host-mem=unavailable
+     tuple-ids=0 row-size=30B cardinality=0
+
+F00:PLAN FRAGMENT [RANDOM]
+  DATASTREAM SINK [FRAGMENT=F01, EXCHANGE=01, UNPARTITIONED]
+  00:SCAN HDFS [default.people, RANDOM]
+     partitions=1/1 size=1.69KB
+     table stats: 0 rows total
+     column stats: unavailable
+     hosts=1 per-host-mem=32.00MB
+     tuple-ids=0 row-size=30B cardinality=0
+----------------
+    Estimated Per-Host Mem: 33554432
+    Estimated Per-Host VCores: 1
+    Tables Missing Stats: default.people
+    Admission result: Admitted immediately
+    Request Pool: root.cloudera
+    ExecSummary: 
+Operator       #Hosts  Avg Time  Max Time  #Rows  Est. #Rows  Peak Mem  Est. Peak Mem  Detail         
+------------------------------------------------------------------------------------------------------
+01:EXCHANGE         1  13.799us  13.799us     50           0         0        -1.00 B  UNPARTITIONED  
+00:SCAN HDFS        1  132.29ms  132.29ms     50           0  55.00 KB       32.00 MB  default.people 
+    Query Timeline: 343.753ms
+       - Start execution: 28.387us (28.387us)
+       - Planning finished: 4.605ms (4.577ms)
+       - Submit for admission: 5.114ms (508.722us)
+       - Completed admission: 5.157ms (42.340us)
+       - Ready to start remote fragments: 6.465ms (1.308ms)
+       - Remote fragments started: 133.811ms (127.346ms)
+       - Rows available: 241.119ms (107.307ms)
+       - First row fetched: 336.131ms (95.12ms)
+       - Unregister query: 342.998ms (6.866ms)
+  ImpalaServer:
+     - ClientFetchWaitTimer: 101.637ms
+     - RowMaterializationTimer: 45.111us
+  Execution Profile a849ff2f1e30fac5:db49e6b1ab56a6b4:(Total: 235.643ms, non-child: 0ns, % non-child: 0.00%)
+    Fragment start latencies:  count: 1, last: 0.12703, min: 0.12703, max: 0.12703, mean: 0.12703, stddev: 0
+    Per Node Peak Memory Usage: quickstart.cloudera:22000(75.00 KB) 
+     - FinalizationTimer: 0ns
+    Coordinator Fragment F01:(Total: 108.22ms, non-child: 1.213ms, % non-child: 1.12%)
+      MemoryUsage(500.0ms): 12.00 KB
+       - AverageThreadTokens: 0.00 
+       - PeakMemoryUsage: 16.00 KB (16384)
+       - PerHostPeakMemUsage: 0
+       - PrepareTime: 95.353us
+       - RowsProduced: 50
+       - TotalCpuTime: 224.164ms
+       - TotalNetworkReceiveTime: 106.802ms
+       - TotalNetworkSendTime: 0ns
+       - TotalStorageWaitTime: 0ns
+      BlockMgr:
+         - BlockWritesOutstanding: 0
+         - BlocksCreated: 0
+         - BlocksRecycled: 0
+         - BufferedPins: 0
+         - BytesWritten: 0
+         - MaxBlockSize: 8.00 MB (8388608)
+         - MemoryLimit: 4.92 GB (5278494720)
+         - PeakMemoryUsage: 0
+         - TotalBufferWaitTime: 0ns
+         - TotalEncryptionTime: 0ns
+         - TotalIntegrityCheckTime: 0ns
+         - TotalReadBlockTime: 0ns
+      EXCHANGE_NODE (id=1):(Total: 106.809ms, non-child: 13.799us, % non-child: 0.01%)
+        BytesReceived(500.0ms): 2.50 KB
+         - BytesReceived: 2.50 KB (2564)
+         - ConvertRowBatchTime: 2.69us
+         - DeserializeRowBatchTimer: 8.277us
+         - FirstBatchArrivalWaitTime: 106.795ms
+         - PeakMemoryUsage: 0
+         - RowsReturned: 50
+         - RowsReturnedRate: 468.00 /sec
+         - SendersBlockedTimer: 0ns
+         - SendersBlockedTotalTimer(*): 0ns
+    Averaged Fragment F00:(Total: 132.633ms, non-child: 0ns, % non-child: 0.00%)
+      split sizes:  min: 1.69 KB, max: 1.69 KB, avg: 1.69 KB, stddev: 0
+      completion times: min:108.529ms  max:108.529ms  mean: 108.529ms  stddev:0ns
+      execution rates: min:15.53 KB/sec  max:15.53 KB/sec  mean:15.53 KB/sec  stddev:0.00 /sec
+      num instances: 1
+       - AverageThreadTokens: 0.00 
+       - PeakMemoryUsage: 67.00 KB (68608)
+       - PerHostPeakMemUsage: 75.00 KB (76800)
+       - PrepareTime: 126.145ms
+       - RowsProduced: 50
+       - TotalCpuTime: 236.576ms
+       - TotalNetworkReceiveTime: 0ns
+       - TotalNetworkSendTime: 93.133us
+       - TotalStorageWaitTime: 3.768ms
+      CodeGen:(Total: 226.666ms, non-child: 226.666ms, % non-child: 100.00%)
+         - CodegenTime: 591.664us
+         - CompileTime: 101.76ms
+         - LoadTime: 124.755ms
+         - ModuleFileSize: 1.94 MB (2032752)
+      DataStreamSender (dst_id=1):(Total: 213.614us, non-child: 213.614us, % non-child: 100.00%)
+         - BytesSent: 2.51 KB (2568)
+         - NetworkThroughput(*): 9.00 MB/sec
+         - OverallThroughput: 11.46 MB/sec
+         - PeakMemoryUsage: 4.00 KB (4096)
+         - SerializeBatchTime: 24.669us
+         - ThriftTransmitTime(*): 272.140us
+         - UncompressedRowBatchSize: 3.74 KB (3834)
+      HDFS_SCAN_NODE (id=0):(Total: 132.29ms, non-child: 132.29ms, % non-child: 100.00%)
+         - AverageHdfsReadThreadConcurrency: 0.00 
+         - AverageScannerThreadConcurrency: 0.00 
+         - BytesRead: 1.69 KB (1726)
+         - BytesReadDataNodeCache: 0
+         - BytesReadLocal: 1.69 KB (1726)
+         - BytesReadShortCircuit: 1.69 KB (1726)
+         - DecompressionTime: 0ns
+         - MaxCompressedTextFileLength: 0
+         - NumDisksAccessed: 1
+         - NumScannerThreadsStarted: 1
+         - PeakMemoryUsage: 55.00 KB (56320)
+         - PerReadThreadRawHdfsThroughput: 55.99 MB/sec
+         - RowsRead: 50
+         - RowsReturned: 50
+         - RowsReturnedRate: 378.00 /sec
+         - ScanRangesComplete: 1
+         - ScannerThreadsInvoluntaryContextSwitches: 11
+         - ScannerThreadsTotalWallClockTime: 5.525ms
+           - DelimiterParseTime: 2.767us
+           - MaterializeTupleTime(*): 943ns
+           - ScannerThreadsSysTime: 0ns
+           - ScannerThreadsUserTime: 0ns
+         - ScannerThreadsVoluntaryContextSwitches: 6
+         - TotalRawHdfsReadTime(*): 29.401us
+         - TotalReadThroughput: 0.00 /sec
+    Fragment F00:
+      Instance a849ff2f1e30fac5:db49e6b1ab56a6b6 (host=quickstart.cloudera:22000):(Total: 132.633ms, non-child: 0ns, % non-child: 0.00%)
+        Hdfs split stats (<volume id>:<# splits>/<split lengths>): 0:1/1.69 KB 
+         - AverageThreadTokens: 0.00 
+         - PeakMemoryUsage: 67.00 KB (68608)
+         - PerHostPeakMemUsage: 75.00 KB (76800)
+         - PrepareTime: 126.145ms
+         - RowsProduced: 50
+         - TotalCpuTime: 236.576ms
+         - TotalNetworkReceiveTime: 0ns
+         - TotalNetworkSendTime: 93.133us
+         - TotalStorageWaitTime: 3.768ms
+        CodeGen:(Total: 226.666ms, non-child: 226.666ms, % non-child: 100.00%)
+           - CodegenTime: 591.664us
+           - CompileTime: 101.76ms
+           - LoadTime: 124.755ms
+           - ModuleFileSize: 1.94 MB (2032752)
+        DataStreamSender (dst_id=1):(Total: 213.614us, non-child: 213.614us, % non-child: 100.00%)
+           - BytesSent: 2.51 KB (2568)
+           - NetworkThroughput(*): 9.00 MB/sec
+           - OverallThroughput: 11.46 MB/sec
+           - PeakMemoryUsage: 4.00 KB (4096)
+           - SerializeBatchTime: 24.669us
+           - ThriftTransmitTime(*): 272.140us
+           - UncompressedRowBatchSize: 3.74 KB (3834)
+        HDFS_SCAN_NODE (id=0):(Total: 132.29ms, non-child: 132.29ms, % non-child: 100.00%)
+          Hdfs split stats (<volume id>:<# splits>/<split lengths>): 0:1/1.69 KB 
+          Hdfs Read Thread Concurrency Bucket: 0:0% 1:0% 2:0% 
+          File Formats: TEXT/NONE:1 
+          ExecOption: Codegen enabled: 1 out of 1
+           - AverageHdfsReadThreadConcurrency: 0.00 
+           - AverageScannerThreadConcurrency: 0.00 
+           - BytesRead: 1.69 KB (1726)
+           - BytesReadDataNodeCache: 0
+           - BytesReadLocal: 1.69 KB (1726)
+           - BytesReadShortCircuit: 1.69 KB (1726)
+           - DecompressionTime: 0ns
+           - MaxCompressedTextFileLength: 0
+           - NumDisksAccessed: 1
+           - NumScannerThreadsStarted: 1
+           - PeakMemoryUsage: 55.00 KB (56320)
+           - PerReadThreadRawHdfsThroughput: 55.99 MB/sec
+           - RowsRead: 50
+           - RowsReturned: 50
+           - RowsReturnedRate: 378.00 /sec
+           - ScanRangesComplete: 1
+           - ScannerThreadsInvoluntaryContextSwitches: 11
+           - ScannerThreadsTotalWallClockTime: 5.525ms
+             - DelimiterParseTime: 2.767us
+             - MaterializeTupleTime(*): 943ns
+             - ScannerThreadsSysTime: 0ns
+             - ScannerThreadsUserTime: 0ns
+           - ScannerThreadsVoluntaryContextSwitches: 6
+           - TotalRawHdfsReadTime(*): 29.401us
+           - TotalReadThroughput: 0.00 /sec
+
++-------------------+---------------------+
+| name              | bday                |
++-------------------+---------------------+
+| Julietta Finck    | 2008-08-09 00:42:48 |
+| Minna Edlund      | 2011-07-21 06:56:28 |
+| Noelia Espiritu   | 2011-11-17 08:14:30 |
+| Chantay Sitsler   | 2009-01-31 19:44:36 |
+| Elton Prenatt     | 2012-09-17 14:19:27 |
+| Milo Birkhead     | 2008-12-06 16:24:42 |
+| Meryl Schmeltzer  | 2009-11-05 07:03:55 |
+| Retha Loesch      | 2011-07-13 19:57:34 |
+| Emilia Ambriz     | 2010-12-24 07:50:58 |
+| Ardella Petrosino | 2011-01-27 07:26:18 |
+| Marvel Planas     | 2012-01-06 06:39:56 |
+| Daniele Meister   | 2009-10-08 18:37:08 |
+| Voncile Lawver    | 2010-03-13 14:50:30 |
+| Derrick Servais   | 2009-01-13 10:24:44 |
+| Merlin Nowlin     | 2008-04-25 23:28:44 |
+| Janiece Hebel     | 2012-01-14 09:38:50 |
+| Mittie Neary      | 2010-08-31 15:49:34 |
+| Aleen Mclendon    | 2009-01-17 08:26:55 |
+| Louise Caffey     | 2009-12-21 12:12:20 |
+| Alva Rossignol    | 2012-02-18 06:24:13 |
+| Kaylee Summa      | 2009-01-10 17:02:33 |
+| France Hagwood    | 2012-05-17 20:56:32 |
+| Xiomara Smelser   | 2011-04-09 20:57:00 |
+| Karyn Haffey      | 2008-01-17 16:06:31 |
+| Vertie Pedraza    | 2008-04-12 03:16:28 |
+| Tosha Crowder     | 2009-06-10 11:59:36 |
+| Mohammed Lazenby  | 2009-07-22 05:23:52 |
+| Alaine Eder       | 2010-12-08 03:21:05 |
+| Terina Mcfatridge | 2009-09-01 16:18:28 |
+| Shenna Gillmore   | 2009-07-04 13:03:55 |
+| Shalon Mormon     | 2010-06-22 21:18:56 |
+| Lorine Krok       | 2011-12-15 21:41:40 |
+| Shakia Slack      | 2011-11-28 10:36:30 |
+| Domitila Jacobs   | 2009-04-24 06:10:45 |
+| Francie Joplin    | 2009-03-26 04:21:17 |
+| Granville Doe     | 2011-06-01 03:54:48 |
+| Krysta Chamblee   | 2010-05-15 21:28:31 |
+| Arcelia Lance     | 2008-03-17 15:44:53 |
+| Jamika Escalera   | 2009-04-14 08:09:53 |
+| Loyce Ormsby      | 2008-06-21 01:41:13 |
+| Tammera Shanks    | 2009-07-25 14:39:54 |
+| Yen Talcott       | 2008-09-21 14:14:42 |
+| Angela Mccabe     | 2011-06-18 01:57:52 |
+| Lamar Petitt      | 2009-11-26 17:34:40 |
+| Ezekiel Garrido   | 2011-08-30 01:13:19 |
+| Susana Harp       | 2011-01-25 19:00:48 |
+| Petra Jhonson     | 2011-06-04 05:07:46 |
+| Evia Cutchin      | 2010-01-03 02:08:51 |
+| Kacy Haven        | 2010-09-10 23:01:19 |
+| Jennette Mutchler | 2009-01-19 22:34:24 |
++-------------------+---------------------+
++--------------+--------+----------+----------+-------+------------+----------+---------------+------------------------+
+| Operator     | #Hosts | Avg Time | Max Time | #Rows | Est. #Rows | Peak Mem | Est. Peak Mem | Detail                 |
++--------------+--------+----------+----------+-------+------------+----------+---------------+------------------------+
+| 01:EXCHANGE  | 1      | 12.74us  | 12.74us  | 50    | -1         | 0 B      | -1 B          | UNPARTITIONED          |
+| 00:SCAN HDFS | 1      | 10.04ms  | 10.04ms  | 50    | -1         | 64.00 KB | 32.00 MB      | default.people_parquet |
++--------------+--------+----------+----------+-------+------------+----------+---------------+------------------------+
+Query Runtime Profile:
+Query (id=f24a0d219d183791:fc84d7384822ffa0):
+  Summary:
+    Session ID: 4940658284e12d53:f037687bbfed01bd
+    Session Type: BEESWAX
+    Start Time: 2014-10-28 05:37:11.938165000
+    End Time: 2014-10-28 05:37:12.056335000
+    Query Type: QUERY
+    Query State: FINISHED
+    Query Status: OK
+    Impala Version: impalad version 2.0.0-cdh5 RELEASE (build ecf30af0b4d6e56ea80297df2189367ada6b7da7)
+    User: cloudera
+    Connected User: cloudera
+    Delegated User: 
+    Network Address: 127.0.0.1:49071
+    Default Db: default
+    Sql Statement: select * FROM people_parquet
+    Coordinator: quickstart.cloudera:22000
+    Plan: 
+----------------
+Estimated Per-Host Requirements: Memory=32.00MB VCores=1
+WARNING: The following tables are missing relevant table and/or column statistics.
+default.people_parquet
+
+F01:PLAN FRAGMENT [UNPARTITIONED]
+  01:EXCHANGE [UNPARTITIONED]
+     hosts=1 per-host-mem=unavailable
+     tuple-ids=0 row-size=30B cardinality=unavailable
+
+F00:PLAN FRAGMENT [RANDOM]
+  DATASTREAM SINK [FRAGMENT=F01, EXCHANGE=01, UNPARTITIONED]
+  00:SCAN HDFS [default.people_parquet, RANDOM]
+     partitions=1/1 size=1.95KB
+     table stats: unavailable
+     column stats: unavailable
+     hosts=1 per-host-mem=32.00MB
+     tuple-ids=0 row-size=30B cardinality=unavailable
+----------------
+    Estimated Per-Host Mem: 33554432
+    Estimated Per-Host VCores: 1
+    Tables Missing Stats: default.people_parquet
+    Admission result: Admitted immediately
+    Request Pool: root.cloudera
+    ExecSummary: 
+Operator       #Hosts  Avg Time  Max Time  #Rows  Est. #Rows  Peak Mem  Est. Peak Mem  Detail                 
+--------------------------------------------------------------------------------------------------------------
+01:EXCHANGE         1  12.741us  12.741us     50          -1         0        -1.00 B  UNPARTITIONED          
+00:SCAN HDFS        1   10.38ms   10.38ms     50          -1  64.00 KB       32.00 MB  default.people_parquet 
+    Query Timeline: 118.913ms
+       - Start execution: 27.279us (27.279us)
+       - Planning finished: 4.661ms (4.634ms)
+       - Submit for admission: 5.6ms (344.490us)
+       - Completed admission: 5.50ms (44.696us)
+       - Ready to start remote fragments: 6.941ms (1.891ms)
+       - Remote fragments started: 7.489ms (547.901us)
+       - Rows available: 17.947ms (10.457ms)
+       - First row fetched: 109.661ms (91.713ms)
+       - Unregister query: 118.178ms (8.517ms)
+  ImpalaServer:
+     - ClientFetchWaitTimer: 100.15ms
+     - RowMaterializationTimer: 54.378us
+  Execution Profile f24a0d219d183791:fc84d7384822ffa0:(Total: 12.359ms, non-child: 0ns, % non-child: 0.00%)
+    Fragment start latencies:  count: 1, last: 0.00041701, min: 0.00041701, max: 0.00041701, mean: 0.00041701, stddev: 0
+    Per Node Peak Memory Usage: quickstart.cloudera:22000(84.00 KB) 
+     - FinalizationTimer: 0ns
+    Coordinator Fragment F01:(Total: 10.349ms, non-child: 1.820ms, % non-child: 17.59%)
+       - AverageThreadTokens: 0.00 
+       - PeakMemoryUsage: 16.00 KB (16384)
+       - PerHostPeakMemUsage: 0
+       - PrepareTime: 19.190us
+       - RowsProduced: 50
+       - TotalCpuTime: 96.94ms
+       - TotalNetworkReceiveTime: 8.520ms
+       - TotalNetworkSendTime: 0ns
+       - TotalStorageWaitTime: 0ns
+      BlockMgr:
+         - BlockWritesOutstanding: 0
+         - BlocksCreated: 0
+         - BlocksRecycled: 0
+         - BufferedPins: 0
+         - BytesWritten: 0
+         - MaxBlockSize: 8.00 MB (8388608)
+         - MemoryLimit: 4.92 GB (5278494720)
+         - PeakMemoryUsage: 0
+         - TotalBufferWaitTime: 0ns
+         - TotalEncryptionTime: 0ns
+         - TotalIntegrityCheckTime: 0ns
+         - TotalReadBlockTime: 0ns
+      EXCHANGE_NODE (id=1):(Total: 8.528ms, non-child: 12.741us, % non-child: 0.15%)
+         - BytesReceived: 2.49 KB (2554)
+         - ConvertRowBatchTime: 2.490us
+         - DeserializeRowBatchTimer: 8.79us
+         - FirstBatchArrivalWaitTime: 8.515ms
+         - PeakMemoryUsage: 0
+         - RowsReturned: 50
+         - RowsReturnedRate: 5.86 K/sec
+         - SendersBlockedTimer: 0ns
+         - SendersBlockedTotalTimer(*): 0ns
+    Averaged Fragment F00:(Total: 10.488ms, non-child: 150.540us, % non-child: 1.44%)
+      split sizes:  min: 1.95 KB, max: 1.95 KB, avg: 1.95 KB, stddev: 0
+      completion times: min:11.30ms  max:11.30ms  mean: 11.30ms  stddev:0ns
+      execution rates: min:176.62 KB/sec  max:176.62 KB/sec  mean:176.62 KB/sec  stddev:0.00 /sec
+      num instances: 1
+       - AverageThreadTokens: 0.00 
+       - PeakMemoryUsage: 76.00 KB (77824)
+       - PerHostPeakMemUsage: 84.00 KB (86016)
+       - PrepareTime: 43.210us
+       - RowsProduced: 50
+       - TotalCpuTime: 14.654ms
+       - TotalNetworkReceiveTime: 0ns
+       - TotalNetworkSendTime: 314.495us
+       - TotalStorageWaitTime: 5.835ms
+      DataStreamSender (dst_id=1):(Total: 299.905us, non-child: 299.905us, % non-child: 100.00%)
+         - BytesSent: 2.50 KB (2558)
+         - NetworkThroughput(*): 9.96 MB/sec
+         - OverallThroughput: 8.13 MB/sec
+         - PeakMemoryUsage: 4.00 KB (4096)
+         - SerializeBatchTime: 33.724us
+         - ThriftTransmitTime(*): 244.945us
+         - UncompressedRowBatchSize: 3.74 KB (3834)
+      HDFS_SCAN_NODE (id=0):(Total: 10.38ms, non-child: 10.38ms, % non-child: 100.00%)
+         - AverageHdfsReadThreadConcurrency: 0.00 
+         - AverageScannerThreadConcurrency: 0.00 
+         - BytesRead: 3.62 KB (3710)
+         - BytesReadDataNodeCache: 0
+         - BytesReadLocal: 3.62 KB (3710)
+         - BytesReadShortCircuit: 3.62 KB (3710)
+         - DecompressionTime: 2.930us
+         - MaxCompressedTextFileLength: 0
+         - NumColumns: 0
+         - NumDisksAccessed: 1
+         - NumScannerThreadsStarted: 1
+         - PeakMemoryUsage: 64.00 KB (65536)
+         - PerReadThreadRawHdfsThroughput: 58.25 MB/sec
+         - RowsRead: 50
+         - RowsReturned: 50
+         - RowsReturnedRate: 4.98 K/sec
+         - ScanRangesComplete: 1
+         - ScannerThreadsInvoluntaryContextSwitches: 45
+         - ScannerThreadsTotalWallClockTime: 9.851ms
+           - MaterializeTupleTime(*): 8.50us
+           - ScannerThreadsSysTime: 0ns
+           - ScannerThreadsUserTime: 999.0us
+         - ScannerThreadsVoluntaryContextSwitches: 8
+         - TotalRawHdfsReadTime(*): 60.737us
+         - TotalReadThroughput: 0.00 /sec
+    Fragment F00:
+      Instance f24a0d219d183791:fc84d7384822ffa2 (host=quickstart.cloudera:22000):(Total: 10.488ms, non-child: 150.540us, % non-child: 1.44%)
+        Hdfs split stats (<volume id>:<# splits>/<split lengths>): 0:1/1.95 KB 
+         - AverageThreadTokens: 0.00 
+         - PeakMemoryUsage: 76.00 KB (77824)
+         - PerHostPeakMemUsage: 84.00 KB (86016)
+         - PrepareTime: 43.210us
+         - RowsProduced: 50
+         - TotalCpuTime: 14.654ms
+         - TotalNetworkReceiveTime: 0ns
+         - TotalNetworkSendTime: 314.495us
+         - TotalStorageWaitTime: 5.835ms
+        DataStreamSender (dst_id=1):(Total: 299.905us, non-child: 299.905us, % non-child: 100.00%)
+           - BytesSent: 2.50 KB (2558)
+           - NetworkThroughput(*): 9.96 MB/sec
+           - OverallThroughput: 8.13 MB/sec
+           - PeakMemoryUsage: 4.00 KB (4096)
+           - SerializeBatchTime: 33.724us
+           - ThriftTransmitTime(*): 244.945us
+           - UncompressedRowBatchSize: 3.74 KB (3834)
+        HDFS_SCAN_NODE (id=0):(Total: 10.38ms, non-child: 10.38ms, % non-child: 100.00%)
+          Hdfs split stats (<volume id>:<# splits>/<split lengths>): 0:1/1.95 KB 
+          Hdfs Read Thread Concurrency Bucket: 0:0% 1:0% 2:0% 
+          File Formats: PARQUET/SNAPPY:2 
+          ExecOption: Codegen enabled: 0 out of 1
+           - AverageHdfsReadThreadConcurrency: 0.00 
+           - AverageScannerThreadConcurrency: 0.00 
+           - BytesRead: 3.62 KB (3710)
+           - BytesReadDataNodeCache: 0
+           - BytesReadLocal: 3.62 KB (3710)
+           - BytesReadShortCircuit: 3.62 KB (3710)
+           - DecompressionTime: 2.930us
+           - MaxCompressedTextFileLength: 0
+           - NumColumns: 0
+           - NumDisksAccessed: 1
+           - NumScannerThreadsStarted: 1
+           - PeakMemoryUsage: 64.00 KB (65536)
+           - PerReadThreadRawHdfsThroughput: 58.25 MB/sec
+           - RowsRead: 50
+           - RowsReturned: 50
+           - RowsReturnedRate: 4.98 K/sec
+           - ScanRangesComplete: 1
+           - ScannerThreadsInvoluntaryContextSwitches: 45
+           - ScannerThreadsTotalWallClockTime: 9.851ms
+             - MaterializeTupleTime(*): 8.50us
+             - ScannerThreadsSysTime: 0ns
+             - ScannerThreadsUserTime: 999.0us
+           - ScannerThreadsVoluntaryContextSwitches: 8
+           - TotalRawHdfsReadTime(*): 60.737us
+           - TotalReadThroughput: 0.00 /sec
+
++-------------------+---------------------+
+| name              | bday                |
++-------------------+---------------------+
+| Julietta Finck    | 2008-08-09 00:42:48 |
+| Minna Edlund      | 2011-07-21 06:56:28 |
+| Noelia Espiritu   | 2011-11-17 08:14:30 |
+| Chantay Sitsler   | 2009-01-31 19:44:36 |
+| Elton Prenatt     | 2012-09-17 14:19:27 |
+| Milo Birkhead     | 2008-12-06 16:24:42 |
+| Meryl Schmeltzer  | 2009-11-05 07:03:55 |
+| Retha Loesch      | 2011-07-13 19:57:34 |
+| Emilia Ambriz     | 2010-12-24 07:50:58 |
+| Ardella Petrosino | 2011-01-27 07:26:18 |
+| Marvel Planas     | 2012-01-06 06:39:56 |
+| Daniele Meister   | 2009-10-08 18:37:08 |
+| Voncile Lawver    | 2010-03-13 14:50:30 |
+| Derrick Servais   | 2009-01-13 10:24:44 |
+| Merlin Nowlin     | 2008-04-25 23:28:44 |
+| Janiece Hebel     | 2012-01-14 09:38:50 |
+| Mittie Neary      | 2010-08-31 15:49:34 |
+| Aleen Mclendon    | 2009-01-17 08:26:55 |
+| Louise Caffey     | 2009-12-21 12:12:20 |
+| Alva Rossignol    | 2012-02-18 06:24:13 |
+| Kaylee Summa      | 2009-01-10 17:02:33 |
+| France Hagwood    | 2012-05-17 20:56:32 |
+| Xiomara Smelser   | 2011-04-09 20:57:00 |
+| Karyn Haffey      | 2008-01-17 16:06:31 |
+| Vertie Pedraza    | 2008-04-12 03:16:28 |
+| Tosha Crowder     | 2009-06-10 11:59:36 |
+| Mohammed Lazenby  | 2009-07-22 05:23:52 |
+| Alaine Eder       | 2010-12-08 03:21:05 |
+| Terina Mcfatridge | 2009-09-01 16:18:28 |
+| Shenna Gillmore   | 2009-07-04 13:03:55 |
+| Shalon Mormon     | 2010-06-22 21:18:56 |
+| Lorine Krok       | 2011-12-15 21:41:40 |
+| Shakia Slack      | 2011-11-28 10:36:30 |
+| Domitila Jacobs   | 2009-04-24 06:10:45 |
+| Francie Joplin    | 2009-03-26 04:21:17 |
+| Granville Doe     | 2011-06-01 03:54:48 |
+| Krysta Chamblee   | 2010-05-15 21:28:31 |
+| Arcelia Lance     | 2008-03-17 15:44:53 |
+| Jamika Escalera   | 2009-04-14 08:09:53 |
+| Loyce Ormsby      | 2008-06-21 01:41:13 |
+| Tammera Shanks    | 2009-07-25 14:39:54 |
+| Yen Talcott       | 2008-09-21 14:14:42 |
+| Angela Mccabe     | 2011-06-18 01:57:52 |
+| Lamar Petitt      | 2009-11-26 17:34:40 |
+| Ezekiel Garrido   | 2011-08-30 01:13:19 |
+| Susana Harp       | 2011-01-25 19:00:48 |
+| Petra Jhonson     | 2011-06-04 05:07:46 |
+| Evia Cutchin      | 2010-01-03 02:08:51 |
+| Kacy Haven        | 2010-09-10 23:01:19 |
+| Jennette Mutchler | 2009-01-19 22:34:24 |
++-------------------+---------------------+
++--------------+--------+----------+----------+-------+------------+----------+---------------+-----------------------+
+| Operator     | #Hosts | Avg Time | Max Time | #Rows | Est. #Rows | Peak Mem | Est. Peak Mem | Detail                |
++--------------+--------+----------+----------+-------+------------+----------+---------------+-----------------------+
+| 01:EXCHANGE  | 1      | 10.38us  | 10.38us  | 50    | 50         | 0 B      | -1 B          | UNPARTITIONED         |
+| 00:SCAN HDFS | 1      | 6.52ms   | 6.52ms   | 50    | 50         | 54.00 KB | 32.00 MB      | default.people_rcfile |
++--------------+--------+----------+----------+-------+------------+----------+---------------+-----------------------+
+Query Runtime Profile:
+Query (id=10434aa754da1429:8fe8d91023b84db1):
+  Summary:
+    Session ID: 4940658284e12d53:f037687bbfed01bd
+    Session Type: BEESWAX
+    Start Time: 2014-10-28 05:37:12.060670000
+    End Time: 2014-10-28 05:37:12.178775000
+    Query Type: QUERY
+    Query State: FINISHED
+    Query Status: OK
+    Impala Version: impalad version 2.0.0-cdh5 RELEASE (build ecf30af0b4d6e56ea80297df2189367ada6b7da7)
+    User: cloudera
+    Connected User: cloudera
+    Delegated User: 
+    Network Address: 127.0.0.1:49071
+    Default Db: default
+    Sql Statement: select * FROM people_rcfile
+    Coordinator: quickstart.cloudera:22000
+    Plan: 
+----------------
+Estimated Per-Host Requirements: Memory=32.00MB VCores=1
+WARNING: The following tables are missing relevant table and/or column statistics.
+default.people_rcfile
+
+F01:PLAN FRAGMENT [UNPARTITIONED]
+  01:EXCHANGE [UNPARTITIONED]
+     hosts=1 per-host-mem=unavailable
+     tuple-ids=0 row-size=30B cardinality=50
+
+F00:PLAN FRAGMENT [RANDOM]
+  DATASTREAM SINK [FRAGMENT=F01, EXCHANGE=01, UNPARTITIONED]
+  00:SCAN HDFS [default.people_rcfile, RANDOM]
+     partitions=1/1 size=1.72KB
+     table stats: 50 rows total
+     column stats: unavailable
+     hosts=1 per-host-mem=32.00MB
+     tuple-ids=0 row-size=30B cardinality=50
+----------------
+    Estimated Per-Host Mem: 33554432
+    Estimated Per-Host VCores: 1
+    Tables Missing Stats: default.people_rcfile
+    Admission result: Admitted immediately
+    Request Pool: root.cloudera
+    ExecSummary: 
+Operator       #Hosts  Avg Time  Max Time  #Rows  Est. #Rows  Peak Mem  Est. Peak Mem  Detail                
+-------------------------------------------------------------------------------------------------------------
+01:EXCHANGE         1  10.377us  10.377us     50          50         0        -1.00 B  UNPARTITIONED         
+00:SCAN HDFS        1   6.516ms   6.516ms     50          50  54.00 KB       32.00 MB  default.people_rcfile 
+    Query Timeline: 118.789ms
+       - Start execution: 29.215us (29.215us)
+       - Planning finished: 5.724ms (5.695ms)
+       - Submit for admission: 6.213ms (489.86us)
+       - Completed admission: 6.293ms (79.347us)
+       - Ready to start remote fragments: 8.289ms (1.996ms)
+       - Remote fragments started: 9.286ms (996.758us)
+       - Rows available: 15.986ms (6.699ms)
+       - First row fetched: 111.225ms (95.238ms)
+       - Unregister query: 118.112ms (6.887ms)
+  ImpalaServer:
+     - ClientFetchWaitTimer: 101.875ms
+     - RowMaterializationTimer: 45.858us
+  Execution Profile 10434aa754da1429:8fe8d91023b84db1:(Total: 9.440ms, non-child: 0ns, % non-child: 0.00%)
+    Fragment start latencies:  count: 1, last: 0.000769564, min: 0.000769564, max: 0.000769564, mean: 0.000769564, stddev: 0
+    Per Node Peak Memory Usage: quickstart.cloudera:22000(74.00 KB) 
+     - FinalizationTimer: 0ns
+    Coordinator Fragment F01:(Total: 8.168ms, non-child: 1.906ms, % non-child: 23.34%)
+       - AverageThreadTokens: 0.00 
+       - PeakMemoryUsage: 16.00 KB (16384)
+       - PerHostPeakMemUsage: 0
+       - PrepareTime: 18.462us
+       - RowsProduced: 50
+       - TotalCpuTime: 98.668ms
+       - TotalNetworkReceiveTime: 6.254ms
+       - TotalNetworkSendTime: 0ns
+       - TotalStorageWaitTime: 0ns
+      BlockMgr:
+         - BlockWritesOutstanding: 0
+         - BlocksCreated: 0
+         - BlocksRecycled: 0
+         - BufferedPins: 0
+         - BytesWritten: 0
+         - MaxBlockSize: 8.00 MB (8388608)
+         - MemoryLimit: 4.92 GB (5278494720)
+         - PeakMemoryUsage: 0
+         - TotalBufferWaitTime: 0ns
+         - TotalEncryptionTime: 0ns
+         - TotalIntegrityCheckTime: 0ns
+         - TotalReadBlockTime: 0ns
+      EXCHANGE_NODE (id=1):(Total: 6.261ms, non-child: 10.377us, % non-child: 0.17%)
+         - BytesReceived: 2.49 KB (2554)
+         - ConvertRowBatchTime: 1.918us
+         - DeserializeRowBatchTimer: 8.314us
+         - FirstBatchArrivalWaitTime: 6.251ms
+         - PeakMemoryUsage: 0
+         - RowsReturned: 50
+         - RowsReturnedRate: 7.99 K/sec
+         - SendersBlockedTimer: 0ns
+         - SendersBlockedTotalTimer(*): 0ns
+    Averaged Fragment F00:(Total: 6.873ms, non-child: 258.291us, % non-child: 3.76%)
+      split sizes:  min: 1.72 KB, max: 1.72 KB, avg: 1.72 KB, stddev: 0
+      completion times: min:7.300ms  max:7.300ms  mean: 7.300ms  stddev:0ns
+      execution rates: min:235.58 KB/sec  max:235.58 KB/sec  mean:235.58 KB/sec  stddev:0.00 /sec
+      num instances: 1
+       - AverageThreadTokens: 0.00 
+       - PeakMemoryUsage: 66.00 KB (67584)
+       - PerHostPeakMemUsage: 74.00 KB (75776)
+       - PrepareTime: 43.627us
+       - RowsProduced: 50
+       - TotalCpuTime: 10.702ms
+       - TotalNetworkReceiveTime: 0ns
+       - TotalNetworkSendTime: 118.212us
+       - TotalStorageWaitTime: 3.131ms
+      DataStreamSender (dst_id=1):(Total: 99.440us, non-child: 99.440us, % non-child: 100.00%)
+         - BytesSent: 2.50 KB (2558)
+         - NetworkThroughput(*): 10.55 MB/sec
+         - OverallThroughput: 24.53 MB/sec
+         - PeakMemoryUsage: 4.00 KB (4096)
+         - SerializeBatchTime: 32.225us
+         - ThriftTransmitTime(*): 231.227us
+         - UncompressedRowBatchSize: 3.74 KB (3834)
+      HDFS_SCAN_NODE (id=0):(Total: 6.516ms, non-child: 6.516ms, % non-child: 100.00%)
+         - AverageHdfsReadThreadConcurrency: 0.00 
+         - AverageScannerThreadConcurrency: 0.00 
+         - BytesRead: 2.72 KB (2785)
+         - BytesReadDataNodeCache: 0
+         - BytesReadLocal: 2.72 KB (2785)
+         - BytesReadShortCircuit: 2.72 KB (2785)
+         - BytesSkipped: 0
+         - DecompressionTime: 0ns
+         - MaxCompressedTextFileLength: 0
+         - NumDisksAccessed: 1
+         - NumScannerThreadsStarted: 1
+         - PeakMemoryUsage: 54.00 KB (55296)
+         - PerReadThreadRawHdfsThroughput: 67.11 MB/sec
+         - RowsRead: 50
+         - RowsReturned: 50
+         - RowsReturnedRate: 7.67 K/sec
+         - ScanRangesComplete: 1
+         - ScannerThreadsInvoluntaryContextSwitches: 20
+         - ScannerThreadsTotalWallClockTime: 6.443ms
+           - MaterializeTupleTime(*): 5.723us
+           - ScannerThreadsSysTime: 999.0us
+           - ScannerThreadsUserTime: 0ns
+         - ScannerThreadsVoluntaryContextSwitches: 7
+         - TotalRawHdfsReadTime(*): 39.577us
+         - TotalReadThroughput: 0.00 /sec
+    Fragment F00:
+      Instance 10434aa754da1429:8fe8d91023b84db3 (host=quickstart.cloudera:22000):(Total: 6.873ms, non-child: 258.291us, % non-child: 3.76%)
+        Hdfs split stats (<volume id>:<# splits>/<split lengths>): 0:1/1.72 KB 
+         - AverageThreadTokens: 0.00 
+         - PeakMemoryUsage: 66.00 KB (67584)
+         - PerHostPeakMemUsage: 74.00 KB (75776)
+         - PrepareTime: 43.627us
+         - RowsProduced: 50
+         - TotalCpuTime: 10.702ms
+         - TotalNetworkReceiveTime: 0ns
+         - TotalNetworkSendTime: 118.212us
+         - TotalStorageWaitTime: 3.131ms
+        DataStreamSender (dst_id=1):(Total: 99.440us, non-child: 99.440us, % non-child: 100.00%)
+           - BytesSent: 2.50 KB (2558)
+           - NetworkThroughput(*): 10.55 MB/sec
+           - OverallThroughput: 24.53 MB/sec
+           - PeakMemoryUsage: 4.00 KB (4096)
+           - SerializeBatchTime: 32.225us
+           - ThriftTransmitTime(*): 231.227us
+           - UncompressedRowBatchSize: 3.74 KB (3834)
+        HDFS_SCAN_NODE (id=0):(Total: 6.516ms, non-child: 6.516ms, % non-child: 100.00%)
+          Hdfs split stats (<volume id>:<# splits>/<split lengths>): 0:1/1.72 KB 
+          Hdfs Read Thread Concurrency Bucket: 0:0% 1:0% 2:0% 
+          File Formats: RC_FILE/NONE:1 
+          ExecOption: Codegen enabled: 0 out of 2
+           - AverageHdfsReadThreadConcurrency: 0.00 
+           - AverageScannerThreadConcurrency: 0.00 
+           - BytesRead: 2.72 KB (2785)
+           - BytesReadDataNodeCache: 0
+           - BytesReadLocal: 2.72 KB (2785)
+           - BytesReadShortCircuit: 2.72 KB (2785)
+           - BytesSkipped: 0
+           - DecompressionTime: 0ns
+           - MaxCompressedTextFileLength: 0
+           - NumDisksAccessed: 1
+           - NumScannerThreadsStarted: 1
+           - PeakMemoryUsage: 54.00 KB (55296)
+           - PerReadThreadRawHdfsThroughput: 67.11 MB/sec
+           - RowsRead: 50
+           - RowsReturned: 50
+           - RowsReturnedRate: 7.67 K/sec
+           - ScanRangesComplete: 1
+           - ScannerThreadsInvoluntaryContextSwitches: 20
+           - ScannerThreadsTotalWallClockTime: 6.443ms
+             - MaterializeTupleTime(*): 5.723us
+             - ScannerThreadsSysTime: 999.0us
+             - ScannerThreadsUserTime: 0ns
+           - ScannerThreadsVoluntaryContextSwitches: 7
+           - TotalRawHdfsReadTime(*): 39.577us
+           - TotalReadThroughput: 0.00 /sec
+
++-------------------+---------------------+
+| name              | bday                |
++-------------------+---------------------+
+| Julietta Finck    | 2008-08-09 00:42:48 |
+| Minna Edlund      | 2011-07-21 06:56:28 |
+| Noelia Espiritu   | 2011-11-17 08:14:30 |
+| Chantay Sitsler   | 2009-01-31 19:44:36 |
+| Elton Prenatt     | 2012-09-17 14:19:27 |
+| Milo Birkhead     | 2008-12-06 16:24:42 |
+| Meryl Schmeltzer  | 2009-11-05 07:03:55 |
+| Retha Loesch      | 2011-07-13 19:57:34 |
+| Emilia Ambriz     | 2010-12-24 07:50:58 |
+| Ardella Petrosino | 2011-01-27 07:26:18 |
+| Marvel Planas     | 2012-01-06 06:39:56 |
+| Daniele Meister   | 2009-10-08 18:37:08 |
+| Voncile Lawver    | 2010-03-13 14:50:30 |
+| Derrick Servais   | 2009-01-13 10:24:44 |
+| Merlin Nowlin     | 2008-04-25 23:28:44 |
+| Janiece Hebel     | 2012-01-14 09:38:50 |
+| Mittie Neary      | 2010-08-31 15:49:34 |
+| Aleen Mclendon    | 2009-01-17 08:26:55 |
+| Louise Caffey     | 2009-12-21 12:12:20 |
+| Alva Rossignol    | 2012-02-18 06:24:13 |
+| Kaylee Summa      | 2009-01-10 17:02:33 |
+| France Hagwood    | 2012-05-17 20:56:32 |
+| Xiomara Smelser   | 2011-04-09 20:57:00 |
+| Karyn Haffey      | 2008-01-17 16:06:31 |
+| Vertie Pedraza    | 2008-04-12 03:16:28 |
+| Tosha Crowder     | 2009-06-10 11:59:36 |
+| Mohammed Lazenby  | 2009-07-22 05:23:52 |
+| Alaine Eder       | 2010-12-08 03:21:05 |
+| Terina Mcfatridge | 2009-09-01 16:18:28 |
+| Shenna Gillmore   | 2009-07-04 13:03:55 |
+| Shalon Mormon     | 2010-06-22 21:18:56 |
+| Lorine Krok       | 2011-12-15 21:41:40 |
+| Shakia Slack      | 2011-11-28 10:36:30 |
+| Domitila Jacobs   | 2009-04-24 06:10:45 |
+| Francie Joplin    | 2009-03-26 04:21:17 |
+| Granville Doe     | 2011-06-01 03:54:48 |
+| Krysta Chamblee   | 2010-05-15 21:28:31 |
+| Arcelia Lance     | 2008-03-17 15:44:53 |
+| Jamika Escalera   | 2009-04-14 08:09:53 |
+| Loyce Ormsby      | 2008-06-21 01:41:13 |
+| Tammera Shanks    | 2009-07-25 14:39:54 |
+| Yen Talcott       | 2008-09-21 14:14:42 |
+| Angela Mccabe     | 2011-06-18 01:57:52 |
+| Lamar Petitt      | 2009-11-26 17:34:40 |
+| Ezekiel Garrido   | 2011-08-30 01:13:19 |
+| Susana Harp       | 2011-01-25 19:00:48 |
+| Petra Jhonson     | 2011-06-04 05:07:46 |
+| Evia Cutchin      | 2010-01-03 02:08:51 |
+| Kacy Haven        | 2010-09-10 23:01:19 |
+| Jennette Mutchler | 2009-01-19 22:34:24 |
++-------------------+---------------------+
++--------------+--------+----------+----------+-------+------------+----------+---------------+------------------------+
+| Operator     | #Hosts | Avg Time | Max Time | #Rows | Est. #Rows | Peak Mem | Est. Peak Mem | Detail                 |
++--------------+--------+----------+----------+-------+------------+----------+---------------+------------------------+
+| 01:EXCHANGE  | 1      | 20.30us  | 20.30us  | 50    | 50         | 0 B      | -1 B          | UNPARTITIONED          |
+| 00:SCAN HDFS | 1      | 134.12ms | 134.12ms | 50    | 50         | 53.00 KB | 32.00 MB      | default.people_seqfile |
++--------------+--------+----------+----------+-------+------------+----------+---------------+------------------------+
+Query Runtime Profile:
+Query (id=e24a4bb91e296835:8b796b6a3602fdb2):
+  Summary:
+    Session ID: 4940658284e12d53:f037687bbfed01bd
+    Session Type: BEESWAX
+    Start Time: 2014-10-28 05:37:12.183622000
+    End Time: 2014-10-28 05:37:12.536493000
+    Query Type: QUERY
+    Query State: FINISHED
+    Query Status: OK
+    Impala Version: impalad version 2.0.0-cdh5 RELEASE (build ecf30af0b4d6e56ea80297df2189367ada6b7da7)
+    User: cloudera
+    Connected User: cloudera
+    Delegated User: 
+    Network Address: 127.0.0.1:49071
+    Default Db: default
+    Sql Statement: select * FROM people_seqfile
+    Coordinator: quickstart.cloudera:22000
+    Plan: 
+----------------
+Estimated Per-Host Requirements: Memory=32.00MB VCores=1
+WARNING: The following tables are missing relevant table and/or column statistics.
+default.people_seqfile
+
+F01:PLAN FRAGMENT [UNPARTITIONED]
+  01:EXCHANGE [UNPARTITIONED]
+     hosts=1 per-host-mem=unavailable
+     tuple-ids=0 row-size=30B cardinality=50
+
+F00:PLAN FRAGMENT [RANDOM]
+  DATASTREAM SINK [FRAGMENT=F01, EXCHANGE=01, UNPARTITIONED]
+  00:SCAN HDFS [default.people_seqfile, RANDOM]
+     partitions=1/1 size=2.38KB
+     table stats: 50 rows total
+     column stats: unavailable
+     hosts=1 per-host-mem=32.00MB
+     tuple-ids=0 row-size=30B cardinality=50
+----------------
+    Estimated Per-Host Mem: 33554432
+    Estimated Per-Host VCores: 1
+    Tables Missing Stats: default.people_seqfile
+    Admission result: Admitted immediately
+    Request Pool: root.cloudera
+    ExecSummary: 
+Operator       #Hosts   Avg Time   Max Time  #Rows  Est. #Rows  Peak Mem  Est. Peak Mem  Detail                 
+----------------------------------------------------------------------------------------------------------------
+01:EXCHANGE         1   20.296us   20.296us     50          50         0        -1.00 B  UNPARTITIONED          
+00:SCAN HDFS        1  134.118ms  134.118ms     50          50  53.00 KB       32.00 MB  default.people_seqfile 
+    Query Timeline: 353.611ms
+       - Start execution: 29.385us (29.385us)
+       - Planning finished: 5.391ms (5.362ms)
+       - Submit for admission: 5.776ms (384.729us)
+       - Completed admission: 6.593ms (817.250us)
+       - Ready to start remote fragments: 7.859ms (1.265ms)
+       - Remote fragments started: 136.228ms (128.369ms)
+       - Rows available: 249.303ms (113.74ms)
+       - First row fetched: 344.773ms (95.470ms)
+       - Unregister query: 352.879ms (8.105ms)
+  ImpalaServer:
+     - ClientFetchWaitTimer: 103.304ms
+     - RowMaterializationTimer: 44.579us
+  Execution Profile e24a4bb91e296835:8b796b6a3602fdb2:(Total: 236.557ms, non-child: 0ns, % non-child: 0.00%)
+    Fragment start latencies:  count: 1, last: 0.128128, min: 0.128128, max: 0.128128, mean: 0.128128, stddev: 0
+    Per Node Peak Memory Usage: quickstart.cloudera:22000(76.00 KB) 
+     - FinalizationTimer: 0ns
+    Coordinator Fragment F01:(Total: 107.801ms, non-child: 1.115ms, % non-child: 1.03%)
+      MemoryUsage(500.0ms): 8.00 KB
+       - AverageThreadTokens: 0.00 
+       - PeakMemoryUsage: 16.00 KB (16384)
+       - PerHostPeakMemUsage: 0
+       - PrepareTime: 18.298us
+       - RowsProduced: 50
+       - TotalCpuTime: 231.524ms
+       - TotalNetworkReceiveTime: 106.676ms
+       - TotalNetworkSendTime: 0ns
+       - TotalStorageWaitTime: 0ns
+      BlockMgr:
+         - BlockWritesOutstanding: 0
+         - BlocksCreated: 0
+         - BlocksRecycled: 0
+         - BufferedPins: 0
+         - BytesWritten: 0
+         - MaxBlockSize: 8.00 MB (8388608)
+         - MemoryLimit: 4.92 GB (5278494720)
+         - PeakMemoryUsage: 0
+         - TotalBufferWaitTime: 0ns
+         - TotalEncryptionTime: 0ns
+         - TotalIntegrityCheckTime: 0ns
+         - TotalReadBlockTime: 0ns
+      EXCHANGE_NODE (id=1):(Total: 106.686ms, non-child: 20.296us, % non-child: 0.02%)
+        BytesReceived(500.0ms): 0
+         - BytesReceived: 2.50 KB (2564)
+         - ConvertRowBatchTime: 2.356us
+         - DeserializeRowBatchTimer: 7.934us
+         - FirstBatchArrivalWaitTime: 106.665ms
+         - PeakMemoryUsage: 0
+         - RowsReturned: 50
+         - RowsReturnedRate: 468.00 /sec
+         - SendersBlockedTimer: 0ns
+         - SendersBlockedTotalTimer(*): 0ns
+    Averaged Fragment F00:(Total: 134.615ms, non-child: 0ns, % non-child: 0.00%)
+      split sizes:  min: 2.38 KB, max: 2.38 KB, avg: 2.38 KB, stddev: 0
+      completion times: min:113.675ms  max:113.675ms  mean: 113.675ms  stddev:0ns
+      execution rates: min:20.90 KB/sec  max:20.90 KB/sec  mean:20.90 KB/sec  stddev:0.00 /sec
+      num instances: 1
+       - AverageThreadTokens: 2.00 
+       - PeakMemoryUsage: 65.00 KB (66560)
+       - PerHostPeakMemUsage: 76.00 KB (77824)
+       - PrepareTime: 127.569ms
+       - RowsProduced: 50
+       - TotalCpuTime: 244.73ms
+       - TotalNetworkReceiveTime: 0ns
+       - TotalNetworkSendTime: 416ns
+       - TotalStorageWaitTime: 3.373ms
+      CodeGen:(Total: 232.921ms, non-child: 232.921ms, % non-child: 100.00%)
+         - CodegenTime: 992.701us
+         - CompileTime: 106.247ms
+         - LoadTime: 125.887ms
+         - ModuleFileSize: 1.94 MB (2032752)
+      DataStreamSender (dst_id=1):(Total: 274.517us, non-child: 274.517us, % non-child: 100.00%)
+         - BytesSent: 2.51 KB (2568)
+         - NetworkThroughput(*): 14.52 MB/sec
+         - OverallThroughput: 8.92 MB/sec
+         - PeakMemoryUsage: 4.00 KB (4096)
+         - SerializeBatchTime: 24.16us
+         - ThriftTransmitTime(*): 168.668us
+         - UncompressedRowBatchSize: 3.74 KB (3834)
+      HDFS_SCAN_NODE (id=0):(Total: 134.118ms, non-child: 134.118ms, % non-child: 100.00%)
+         - AverageHdfsReadThreadConcurrency: 0.00 
+         - AverageScannerThreadConcurrency: 1.00 
+         - BytesRead: 3.38 KB (3457)
+         - BytesReadDataNodeCache: 0
+         - BytesReadLocal: 3.38 KB (3457)
+         - BytesReadShortCircuit: 3.38 KB (3457)
+         - BytesSkipped: 0
+         - DecompressionTime: 0ns
+         - MaxCompressedTextFileLength: 0
+         - NumDisksAccessed: 2
+         - NumScannerThreadsStarted: 1
+         - PeakMemoryUsage: 53.00 KB (54272)
+         - PerReadThreadRawHdfsThroughput: 84.29 MB/sec
+         - RowsRead: 50
+         - RowsReturned: 50
+         - RowsReturnedRate: 372.00 /sec
+         - ScanRangesComplete: 1
+         - ScannerThreadsInvoluntaryContextSwitches: 14
+         - ScannerThreadsTotalWallClockTime: 6.197ms
+           - MaterializeTupleTime(*): 13.731us
+           - ScannerThreadsSysTime: 999.0us
+           - ScannerThreadsUserTime: 0ns
+         - ScannerThreadsVoluntaryContextSwitches: 9
+         - TotalRawHdfsReadTime(*): 39.115us
+         - TotalReadThroughput: 2.00 KB/sec
+    Fragment F00:
+      Instance e24a4bb91e296835:8b796b6a3602fdb4 (host=quickstart.cloudera:22000):(Total: 134.615ms, non-child: 0ns, % non-child: 0.00%)
+        Hdfs split stats (<volume id>:<# splits>/<split lengths>): 0:1/2.38 KB 
+        MemoryUsage(500.0ms): 64.00 KB
+        ThreadUsage(500.0ms): 2
+         - AverageThreadTokens: 2.00 
+         - PeakMemoryUsage: 65.00 KB (66560)
+         - PerHostPeakMemUsage: 76.00 KB (77824)
+         - PrepareTime: 127.569ms
+         - RowsProduced: 50
+         - TotalCpuTime: 244.73ms
+         - TotalNetworkReceiveTime: 0ns
+         - TotalNetworkSendTime: 416ns
+         - TotalStorageWaitTime: 3.373ms
+        CodeGen:(Total: 232.921ms, non-child: 232.921ms, % non-child: 100.00%)
+           - CodegenTime: 992.701us
+           - CompileTime: 106.247ms
+           - LoadTime: 125.887ms
+           - ModuleFileSize: 1.94 MB (2032752)
+        DataStreamSender (dst_id=1):(Total: 274.517us, non-child: 274.517us, % non-child: 100.00%)
+           - BytesSent: 2.51 KB (2568)
+           - NetworkThroughput(*): 14.52 MB/sec
+           - OverallThroughput: 8.92 MB/sec
+           - PeakMemoryUsage: 4.00 KB (4096)
+           - SerializeBatchTime: 24.16us
+           - ThriftTransmitTime(*): 168.668us
+           - UncompressedRowBatchSize: 3.74 KB (3834)
+        HDFS_SCAN_NODE (id=0):(Total: 134.118ms, non-child: 134.118ms, % non-child: 100.00%)
+          Hdfs split stats (<volume id>:<# splits>/<split lengths>): 0:1/2.38 KB 
+          Hdfs Read Thread Concurrency Bucket: 0:100% 1:0% 2:0% 
+          File Formats: SEQUENCE_FILE/NONE:1 
+          ExecOption: Codegen enabled: 1 out of 1
+          BytesRead(500.0ms): 1024.00 B
+           - AverageHdfsReadThreadConcurrency: 0.00 
+           - AverageScannerThreadConcurrency: 1.00 
+           - BytesRead: 3.38 KB (3457)
+           - BytesReadDataNodeCache: 0
+           - BytesReadLocal: 3.38 KB (3457)
+           - BytesReadShortCircuit: 3.38 KB (3457)
+           - BytesSkipped: 0
+           - DecompressionTime: 0ns
+           - MaxCompressedTextFileLength: 0
+           - NumDisksAccessed: 2
+           - NumScannerThreadsStarted: 1
+           - PeakMemoryUsage: 53.00 KB (54272)
+           - PerReadThreadRawHdfsThroughput: 84.29 MB/sec
+           - RowsRead: 50
+           - RowsReturned: 50
+           - RowsReturnedRate: 372.00 /sec
+           - ScanRangesComplete: 1
+           - ScannerThreadsInvoluntaryContextSwitches: 14
+           - ScannerThreadsTotalWallClockTime: 6.197ms
+             - MaterializeTupleTime(*): 13.731us
+             - ScannerThreadsSysTime: 999.0us
+             - ScannerThreadsUserTime: 0ns
+           - ScannerThreadsVoluntaryContextSwitches: 9
+           - TotalRawHdfsReadTime(*): 39.115us
+           - TotalReadThroughput: 2.00 KB/sec
+
