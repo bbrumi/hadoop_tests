@@ -1,6 +1,18 @@
+DROP TABLE IF EXISTS tmp;
+CREATE TABLE IF NOT EXISTS tmp (
+	name STRING,
+	department STRING,
+	street STRING,
+	nr INT,
+	zip STRING)
+ROW FORMAT DELIMITED
+   FIELDS TERMINATED BY '|'
+STORED AS TEXTFILE;
 
+LOAD DATA LOCAL INPATH 'data.txt' INTO TABLE tmp;
 
-CREATE TABLE employees (
+DROP TABLE IF EXISTS employees;
+CREATE TABLE IF NOT EXISTS employees (
  name STRING,
  department STRING,
  street STRING,
@@ -10,15 +22,31 @@ ROW FORMAT DELIMITED
    FIELDS TERMINATED BY '|'
 STORED AS PARQUET;
 
-LOAD DATA LOCAL INPATH 'data.txt' INTO TABLE employees;
+INSERT OVERWRITE TABLE employees SELECT * FROM tmp;
 
-# show structure in HDFS
+DROP TABLE IF EXISTS tmp;
+CREATE TABLE IF NOT EXISTS tmp (
+        name STRING,
+        info MAP<STRING,STRING>,
+        departments ARRAY<STRING>,
+        address STRUCT<street:STRING,nr:INT,zipcode:STRING>
+)
+ROW FORMAT DELIMITED
+   FIELDS TERMINATED BY '|'
+   COLLECTION ITEMS TERMINATED BY '%'
+   MAP KEYS TERMINATED BY '&'
+STORED AS TEXTFILE;
 
-CREATE TABLE complex_empoyees (
+LOAD DATA LOCAL INPATH 'data_complex.txt' INTO TABLE tmp;
+
+-- show structure in HDFS
+
+DROP TABLE IF EXISTS complex_employees;
+CREATE TABLE complex_employees (
 	name STRING,
 	info MAP<STRING,STRING>,
  	departments ARRAY<STRING>,
-	address STRUCT<street:STRING,nr:INT,zipcode:STRING>)
+	address STRUCT<street:STRING,nr:INT,zipcode:STRING>
 )
 ROW FORMAT DELIMITED
    FIELDS TERMINATED BY '|'
@@ -26,4 +54,6 @@ ROW FORMAT DELIMITED
    MAP KEYS TERMINATED BY '&'
 STORED AS PARQUET;
 
-LOAD DATA LOCAL INPATH 'data_complex.txt' INTO TABLE employees;
+INSERT OVERWRITE TABLE complex_employees SELECT * FROM tmp;
+
+DROP TABLE IF EXISTS tmp;
