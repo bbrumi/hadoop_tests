@@ -1,0 +1,2 @@
+Jane Doe|title:ms&birthday:2000-01-01|HR%D1|A str%1%1000AB
+John Doe|title:mr&birthday:1980-01-01|IT%D2|B str%2%1100AB

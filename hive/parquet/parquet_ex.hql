@@ -1,0 +1,29 @@
+
+
+CREATE TABLE employees (
+ name STRING,
+ department STRING,
+ street STRING,
+ nr INT, 
+ zip STRING) 
+ROW FORMAT DELIMITED
+   FIELDS TERMINATED BY '|'
+STORED AS PARQUET;
+
+LOAD DATA LOCAL INPATH 'data.txt' INTO TABLE employees;
+
+# show structure in HDFS
+
+CREATE TABLE complex_empoyees (
+	name STRING,
+	info MAP<STRING,STRING>,
+ 	departments ARRAY<STRING>,
+	address STRUCT<street:STRING,nr:INT,zipcode:STRING>)
+)
+ROW FORMAT DELIMITED
+   FIELDS TERMINATED BY '|'
+   COLLECTION ITEMS TERMINATED BY '%'
+   MAP KEYS TERMINATED BY '&'
+STORED AS PARQUET;
+
+LOAD DATA LOCAL INPATH 'data_complex.txt' INTO TABLE employees;
