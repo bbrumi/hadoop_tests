@@ -1,5 +1,3 @@
-#!/bin/env python
-
 from random import randrange
 from datetime import timedelta
 from datetime import datetime
