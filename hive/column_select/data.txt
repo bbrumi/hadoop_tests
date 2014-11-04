@@ -1,0 +1,2 @@
+John Doe|21|1983-01-01|Amsterdam
+Jane Doe|20|1982-01-10|Budapest
