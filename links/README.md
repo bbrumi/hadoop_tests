@@ -16,6 +16,8 @@
 
 * [CDH 5 High availability guide](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/latest/CDH5-High-Availability-Guide/CDH5-High-Availability-Guide.html)
 
+* [Datanode metrics](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-1-x/Cloudera-Manager-Health-Tests/ht_datanode.html)
+
 ##### File appends
 *  [File appends in HDFS](http://blog.cloudera.com/blog/2009/07/file-appends-in-hdfs/)
 *  [An update on Apache Hadoop 1.0](http://blog.cloudera.com/blog/2012/01/an-update-on-apache-hadoop-1-0/)
@@ -141,6 +143,10 @@
 
 * [strace](http://timetobleed.com/hello-world/)
 * [Deceived by xciever](http://ccgtech.blogspot.fr/2010/02/hadoop-hdfs-deceived-by-xciever.html)
+
+### Maven & Cloudera
+* [Using the CDH 5 Maven Repository](http://cloudera.com/content/cloudera/en/documentation/core/latest/topics/cdh_vd_cdh5_maven_repo.html)
+
 
 ### Google Whitepapers
 
