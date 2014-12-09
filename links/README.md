@@ -18,6 +18,10 @@
 
 * [Datanode metrics](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-1-x/Cloudera-Manager-Health-Tests/ht_datanode.html)
 
+* [RAID vs. JBOD](http://hadoop.6.n7.nabble.com/RAID-vs-JBOD-td6860.html)
+
+* [Best Practices: Linux File Systems for HDFS](http://hortonworks.com/kb/linux-file-systems-for-hdfs/)
+
 ##### File appends
 *  [File appends in HDFS](http://blog.cloudera.com/blog/2009/07/file-appends-in-hdfs/)
 *  [An update on Apache Hadoop 1.0](http://blog.cloudera.com/blog/2012/01/an-update-on-apache-hadoop-1-0/)
@@ -47,6 +51,7 @@
 * [The Truth About MapReduce Performance on SSDs](http://blog.cloudera.com/blog/2014/03/the-truth-about-mapreduce-performance-on-ssds/)
 * [How-to: Select the Right Hardware for Your New Hadoop Cluster](http://blog.cloudera.com/blog/2013/08/how-to-select-the-right-hardware-for-your-new-hadoop-cluster/)
 
+*[Configuring High Availability for ResourceManager (MRv2/YARN)](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/v5-1-x/CDH5-High-Availability-Guide/cdh5hag_rm_ha_config.html)
 
 
 ### YARN
@@ -131,7 +136,6 @@
 * [User Defined functions in Impala](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v1/latest/Installing-and-Using-Impala/ciiu_udf.html)
 
 
-
 ### Compression
 * [Compression options in Hadoop - A tale of tradeoffs](http://www.slideshare.net/Hadoop_Summit/kamat-singh-june27425pmroom210cv2)
 
@@ -146,6 +150,12 @@
 
 ### Maven & Cloudera
 * [Using the CDH 5 Maven Repository](http://cloudera.com/content/cloudera/en/documentation/core/latest/topics/cdh_vd_cdh5_maven_repo.html)
+
+### AWS & Cloudera
+* [Reference architecture](http://www.cloudera.com/content/dam/cloudera/Resources/PDF/whitepaper/AWS_Reference_Architecture_Whitepaper.pdf)
+* [Best Practices for Deploying Cloudera Enterprise on Amazon Web Services](http://blog.cloudera.com/blog/2014/02/best-practices-for-deploying-cloudera-enterprise-on-amazon-web-services/)
+
+
 
 
 ### Google Whitepapers
