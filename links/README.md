@@ -58,6 +58,7 @@
 
 * [Managing Multiple Resources in Hadoop 2 with YARN](http://blog.cloudera.com/blog/2013/12/managing-multiple-resources-in-hadoop-2-with-yarn/)
 * [How Apache Hadoop YARN HA Works](http://blog.cloudera.com/blog/2014/05/how-apache-hadoop-yarn-ha-works/)
+* [Determine YARN and MapReduce Memory Configuration Settings](http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.0.6.0/bk_installing_manually_book/content/rpm-chap1-11.html)
 
 ##### Migrating from MRv1 to MRv2
 * [Migrating from MRv1 to MRv2](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/latest/CDH5-Installation-Guide/cdh5ig_mapreduce_to_yarn_migrate.html)
@@ -128,6 +129,9 @@
 
 * [Setting up a Multi-tenant Cluster for Impala and MapReduce](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v4-latest/Cloudera-Manager-Installation-Guide/cmig_impala_res_mgmt.html)
 * [Configuring Impala and MapReduce for Multi-tenant Performance](http://blog.cloudera.com/blog/2013/06/configuring-impala-and-mapreduce-for-multi-tenant-performance/)
+
+* [Using YARN Resource Management with Impala -- CDH 5 Only](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/v5-1-x/Impala/Installing-and-Using-Impala/ciiu_resource_management.html)
+
 
 * [Impala security](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v1/latest/Installing-and-Using-Impala/ciiu_security.html)
 
