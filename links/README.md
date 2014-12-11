@@ -51,7 +51,7 @@
 * [The Truth About MapReduce Performance on SSDs](http://blog.cloudera.com/blog/2014/03/the-truth-about-mapreduce-performance-on-ssds/)
 * [How-to: Select the Right Hardware for Your New Hadoop Cluster](http://blog.cloudera.com/blog/2013/08/how-to-select-the-right-hardware-for-your-new-hadoop-cluster/)
 
-*[Configuring High Availability for ResourceManager (MRv2/YARN)](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/v5-1-x/CDH5-High-Availability-Guide/cdh5hag_rm_ha_config.html)
+* [Configuring High Availability for ResourceManager (MRv2/YARN)](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/v5-1-x/CDH5-High-Availability-Guide/cdh5hag_rm_ha_config.html)
 
 
 ### YARN
@@ -66,6 +66,12 @@
 * [Migrating to MapReduce 2 on YARN (For Users)](http://blog.cloudera.com/blog/2013/11/migrating-to-mapreduce-2-on-yarn-for-users/)
 * [Apache Hadoop YARN: Avoiding 6 Time-Consuming "Gotchas"](http://blog.cloudera.com/blog/2014/04/apache-hadoop-yarn-avoiding-6-time-consuming-gotchas/)
 
+* [JIRA- MAPREDUCE-5785- Derive heap size or mapreduce.*.memory.mb automatically](https://issues.apache.org/jira/browse/MAPREDUCE-5785)
+
+###### Java Heap
+
+* [5 Tips for Proper Java Heap Size](http://architects.dzone.com/articles/5-tips-proper-java-heap-size)
+* [Java (JVM) Memory Model and Garbage Collection Monitoring Tuning](http://www.journaldev.com/2856/java-jvm-memory-model-and-garbage-collection-monitoring-tuning)
 
 ### Cloudera Manager
 * [How does Cloudera Manager work?](http://blog.cloudera.com/blog/2013/07/how-does-cloudera-manager-work/)
@@ -107,6 +113,7 @@
 
 ### Hive
 
+* [Configuring the Hive metastore](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/cdh_ig_hive_metastore_configure.html)
 * [Language Manual](https://cwiki.apache.org/confluence/display/Hive/LanguageManual)
 * [Schema tool](https://cwiki.apache.org/confluence/display/Hive/Hive+Schema+Tool)
 * [Hive locking](https://cwiki.apache.org/confluence/display/Hive/Locking)
@@ -115,6 +122,7 @@
 * [Writing UDFs for Hive](http://www.cloudera.com/content/cloudera/en/resources/library/training/writing-udfs-for-hive.html)
 * [User Defined functions in Hive](https://blogs.oracle.com/datawarehousing/entry/user_defined_functions_in_hive)
 * [Hive UDFs](https://github.com/dataiku/dataiku-hive-udf)
+* [ACID and transactions in Hive](https://cwiki.apache.org/confluence/display/Hive/Hive+Transactions)
 
 ### Sentry
 * [With Sentry, Cloudera Fills Hadoop’s Enterprise Security Gap](http://blog.cloudera.com/blog/2013/07/with-sentry-cloudera-fills-hadoops-enterprise-security-gap/)
