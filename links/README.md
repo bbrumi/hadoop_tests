@@ -8,6 +8,12 @@
 
 *  [A guide to checkpointing in Hadoop](http://blog.cloudera.com/blog/2014/03/a-guide-to-checkpointing-in-hadoop/)
 
+*  [Celebrate failure(s) – a real-world Hadoop example (HDFS issues) -- heartbeat intervals](http://hakunamapdata.com/celebrate-failures-a-real-world-hadoop-example-hdfs-issues/)
+
+*  [The Small Files Problem](http://blog.cloudera.com/blog/2009/02/the-small-files-problem/)
+
+*  [Scalability of the Hadoop Distributed File System](https://developer.yahoo.com/blogs/hadoop/scalability-hadoop-distributed-file-system-452.html)
+
 * [How Improved Short-Circuit Local Reads Bring Better Performance and Security to Hadoop](http://blog.cloudera.com/blog/2013/08/how-improved-short-circuit-local-reads-bring-better-performance-and-security-to-hadoop/)
 * [Expose disk-location information for blocks to enable better scheduling](https://issues.apache.org/jira/browse/HDFS-3672)
 * [DFS read performance suboptimal when client co-located on nodes with data](https://issues.apache.org/jira/browse/HDFS-347)
