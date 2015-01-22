@@ -28,6 +28,9 @@
 
 * [Best Practices: Linux File Systems for HDFS](http://hortonworks.com/kb/linux-file-systems-for-hdfs/)
 
+* [HDFS Encryption at rest -- Cloudera](http://www.cloudera.com/content/cloudera/en/documentation/core/v5-2-x/topics/cdh_sg_hdfs_encryption.html)
+
+
 ##### File appends
 *  [File appends in HDFS](http://blog.cloudera.com/blog/2009/07/file-appends-in-hdfs/)
 *  [An update on Apache Hadoop 1.0](http://blog.cloudera.com/blog/2012/01/an-update-on-apache-hadoop-1-0/)
@@ -45,6 +48,7 @@
 ##### Security
 * [How-to: Set Up a Hadoop Cluster with Network Encryption](http://blog.cloudera.com/blog/2013/03/how-to-set-up-a-hadoop-cluster-with-network-encryption/)
 * [ Direct Active Directory Integration for Kerberos Authentication](http://blog.cloudera.com/blog/2014/07/new-in-cloudera-manager-5-1-direct-active-directory-integration-for-kerberos-authentication/)
+* [Cloudera security guide](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/security.html)
 
 
 ##### Cluster maintainance
