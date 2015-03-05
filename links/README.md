@@ -161,6 +161,12 @@
 ### Compression
 * [Compression options in Hadoop - A tale of tradeoffs](http://www.slideshare.net/Hadoop_Summit/kamat-singh-june27425pmroom210cv2)
 
+### Parquet & Avro
+* [Understanding how Parquet integrates with Avro, Thrift and Protocol Buffers](http://grepalex.com/2014/05/13/parquet-file-format-and-object-model/)
+* [Parquet Schema Evolution](https://github.com/Parquet/parquet-format/issues/91)
+* [Reading and Writing Avro Files From the Command Line](http://www.michael-noll.com/blog/2013/03/17/reading-and-writing-avro-files-from-the-command-line/)
+
+
 ### Monitoring
 * [HADOOP-6728-MetricsV2](http://wiki.apache.org/hadoop/HADOOP-6728-MetricsV2)
 * [What is Hadoop Metrics2?](http://blog.cloudera.com/blog/2012/10/what-is-hadoop-metrics2/)
