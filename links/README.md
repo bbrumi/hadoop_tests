@@ -49,7 +49,7 @@
 * [How-to: Set Up a Hadoop Cluster with Network Encryption](http://blog.cloudera.com/blog/2013/03/how-to-set-up-a-hadoop-cluster-with-network-encryption/)
 * [ Direct Active Directory Integration for Kerberos Authentication](http://blog.cloudera.com/blog/2014/07/new-in-cloudera-manager-5-1-direct-active-directory-integration-for-kerberos-authentication/)
 * [Cloudera security guide](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/security.html)
-
+* [RecordService: For Fine-Grained Security Enforcement Across the Hadoop Ecosystem](http://blog.cloudera.com/blog/2015/09/recordservice-for-fine-grained-security-enforcement-across-the-hadoop-ecosystem/)
 
 ##### Cluster maintainance
 
@@ -62,7 +62,7 @@
 * [How-to: Select the Right Hardware for Your New Hadoop Cluster](http://blog.cloudera.com/blog/2013/08/how-to-select-the-right-hardware-for-your-new-hadoop-cluster/)
 
 * [Configuring High Availability for ResourceManager (MRv2/YARN)](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/v5-1-x/CDH5-High-Availability-Guide/cdh5hag_rm_ha_config.html)
-
+* [Tuning the Cluster for MapReduce v2 (YARN)](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/cdh_ig_yarn_tuning.html)
 
 ### YARN
 
@@ -145,7 +145,7 @@
 
 ###  Impala
 
-* [Impala vs Hive SQL differences](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v1/latest/Installing-and-Using-Impala/ciiu_langref_unsupported.html)
+* [Impala vs Hive SQL differences](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v2-0-x/topics/impala_langref_unsupported.html)
 * [Impala Performance Update: Now Reaching DBMS-Class Speed](http://blog.cloudera.com/blog/2014/01/impala-performance-dbms-class-speed/)
 
 
