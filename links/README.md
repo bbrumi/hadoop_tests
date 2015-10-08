@@ -83,6 +83,10 @@
 * [5 Tips for Proper Java Heap Size](http://architects.dzone.com/articles/5-tips-proper-java-heap-size)
 * [Java (JVM) Memory Model and Garbage Collection Monitoring Tuning](http://www.journaldev.com/2856/java-jvm-memory-model-and-garbage-collection-monitoring-tuning)
 
+### Spark
+* [Can Spark Streaming survive Chaos Monkey?](http://techblog.netflix.com/2015/03/can-spark-streaming-survive-chaos-monkey.html)
+* [How-to: Tune Your Apache Spark Jobs (Part 1)](http://blog.cloudera.com/blog/2015/03/how-to-tune-your-apache-spark-jobs-part-1/)
+
 ### Cloudera Manager
 * [How does Cloudera Manager work?](http://blog.cloudera.com/blog/2013/07/how-does-cloudera-manager-work/)
 * [Cloudera Manager Primer - understanding terminology](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-latest/Cloudera-Manager-Introduction/cm5i_primer.html?scroll=concept_wfj_tny_jk_unique_1)
