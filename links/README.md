@@ -50,6 +50,7 @@
 * [ Direct Active Directory Integration for Kerberos Authentication](http://blog.cloudera.com/blog/2014/07/new-in-cloudera-manager-5-1-direct-active-directory-integration-for-kerberos-authentication/)
 * [Cloudera security guide](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/security.html)
 * [RecordService: For Fine-Grained Security Enforcement Across the Hadoop Ecosystem](http://blog.cloudera.com/blog/2015/09/recordservice-for-fine-grained-security-enforcement-across-the-hadoop-ecosystem/)
+* [HDFS Data at Rest Encryption](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/cdh_sg_hdfs_encryption.html)
 
 ##### Cluster maintainance
 
