@@ -1,5 +1,8 @@
 # My link collection
 
+## Architecture
+* [Architectural Patterns for Near Real-Time Data Processing with Apache Hadoop](http://blog.cloudera.com/blog/2015/06/architectural-patterns-for-near-real-time-data-processing-with-apache-hadoop/)
+
 ## HDFS
 
 * [Apache Hadoop FileSystem commands](https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html)
