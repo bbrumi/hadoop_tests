@@ -117,6 +117,7 @@
 
 ###Sqoop
 * [Sqoop User Guide](https://sqoop.apache.org/docs/1.4.0-incubating/SqoopUserGuide.html#id1762844)
+* [Sqoop vs. Sqoop2 differences](http://www.cloudera.com/content/www/en-us/documentation/enterprise/latest/topics/cdh_ig_sqoop_vs_sqoop2.html)
 
 ### Thrift
 * [Introduction to Thrift](http://thrift-tutorial.readthedocs.org/en/latest/intro.html)
