@@ -40,6 +40,11 @@
 
 * [HDFS Encryption at rest -- Cloudera](http://www.cloudera.com/content/cloudera/en/documentation/core/v5-2-x/topics/cdh_sg_hdfs_encryption.html)
 
+##### HDFS fsImage backup
+
+* [Backing Up and Restoring HDFS Metadata](http://www.cloudera.com/content/www/en-us/documentation/enterprise/latest/topics/cm_mc_hdfs_metadata_backup.html)
+
+* [Backing up Namenode FSImage](https://community.cloudera.com/t5/Storage-Random-Access-HDFS/Backing-up-Namenode-FSImage/td-p/24268)
 
 ##### File appends
 *  [File appends in HDFS](http://blog.cloudera.com/blog/2009/07/file-appends-in-hdfs/)
