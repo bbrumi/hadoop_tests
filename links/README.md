@@ -166,6 +166,8 @@
 
 * [User Defined functions in Impala](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v1/latest/Installing-and-Using-Impala/ciiu_udf.html)
 
+### Oozie
+* [How-To: Schedule Recurring Hadoop Jobs with Apache Oozie](http://blog.cloudera.com/blog/2013/01/how-to-schedule-recurring-hadoop-jobs-with-apache-oozie/)
 
 ### Compression
 * [Compression options in Hadoop - A tale of tradeoffs](http://www.slideshare.net/Hadoop_Summit/kamat-singh-june27425pmroom210cv2)
