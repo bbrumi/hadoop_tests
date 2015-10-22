@@ -3,6 +3,14 @@
 ## Architecture
 * [Architectural Patterns for Near Real-Time Data Processing with Apache Hadoop](http://blog.cloudera.com/blog/2015/06/architectural-patterns-for-near-real-time-data-processing-with-apache-hadoop/)
 
+## High Availability
+
+* [CDH 5 High availability guide](http://www.cloudera.com/content/www/en-us/documentation/enterprise/latest/topics/admin_ha.html)
+
+* [Configuring HiveServer2](http://www.cloudera.com/content/www/en-us/documentation/enterprise/latest/topics/cdh_ig_hiveserver2_configure.html)
+
+* [Hue High Availability](http://www.cloudera.com/content/www/en-us/documentation/enterprise/latest/topics/cdh_hag_hue_config.html)
+
 ## HDFS
 
 * [Apache Hadoop FileSystem commands](https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html)
@@ -23,7 +31,6 @@
 
 * [Two memory-related issues on the Apache Hadoop cluster (memory swapping and the OOM killer)](http://hakunamapdata.com/two-memory-related-issues-on-the-apache-hadoop-cluster/)
 
-* [CDH 5 High availability guide](http://www.cloudera.com/content/cloudera/en/documentation/cdh5/latest/CDH5-High-Availability-Guide/CDH5-High-Availability-Guide.html)
 
 * [Datanode metrics](http://www.cloudera.com/content/cloudera/en/documentation/cloudera-manager/v5-1-x/Cloudera-Manager-Health-Tests/ht_datanode.html)
 
