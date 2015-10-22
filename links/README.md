@@ -56,6 +56,7 @@
 
 
 ##### Security
+* [Explain like I’m 5: Kerberos](http://www.roguelynn.com/words/explain-like-im-5-kerberos/)
 * [How-to: Set Up a Hadoop Cluster with Network Encryption](http://blog.cloudera.com/blog/2013/03/how-to-set-up-a-hadoop-cluster-with-network-encryption/)
 * [ Direct Active Directory Integration for Kerberos Authentication](http://blog.cloudera.com/blog/2014/07/new-in-cloudera-manager-5-1-direct-active-directory-integration-for-kerberos-authentication/)
 * [Cloudera security guide](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/security.html)
