@@ -74,7 +74,7 @@ This job runs successfully. Let's look at the output:
 	h	test2
 	i	test2
 
-Hey...wait...were are out NULL values?
+Hey...wait...were are our NULL values?
 
 Let's try it again, but now let's specify "-m 1" instead of split-by.
 
